@@ -1,0 +1,12 @@
+/public/fileadmin/_processed_/
+/public/fileadmin/_temp_/
+/public/typo3/
+/public/typo3conf/LocalConfiguration.php
+/public/typo3conf/l10n/
+/public/typo3conf/ext/
+/public/typo3temp/
+/var/
+/vendor/
+/.idea/
+.DS_Store
+Thumbs.db
