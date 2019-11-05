@@ -1,0 +1,60 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
+
+
+############
+### PAGE ###
+############
+page {
+    logo {
+        file = EXT:book_store_site/Resources/Public/Images/logo.svg
+        fileInverted = EXT:book_store_site/Resources/Public/Images/logo-inverted.svg
+        height = 52
+        width = 192
+        alt = Book Store Site
+        linktitle = Book Store Site
+    }
+    favicon {
+        file = EXT:book_store_site/Resources/Public/Icons/favicon.ico
+    }
+    fluidtemplate {
+        layoutRootPath = EXT:book_store_site/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:book_store_site/Resources/Private/Partials/Page/
+        templateRootPath = EXT:book_store_site/Resources/Private/Templates/Page/
+    }
+}
+
+
+##################
+### EXTENSIONS ###
+##################
+plugin.bootstrap_package {
+    view {
+        layoutRootPath = EXT:book_store_site/Resources/Private/Layouts/
+        partialRootPath = EXT:book_store_site/Resources/Private/Partials/
+        templateRootPath = EXT:book_store_site/Resources/Private/Templates/
+    }
+}
+
+
+########################
+### CONTENT ELEMENTS ###
+########################
+plugin.bootstrap_package_contentelements {
+    view {
+        layoutRootPath = EXT:book_store_site/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:book_store_site/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:book_store_site/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+################################
+### BOOTSTRAP SCSS CONSTANTS ###
+################################
+plugin.bootstrap_package.settings.scss {
+    primary = #eb3e4a
+    secondary = #013859
+}

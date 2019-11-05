@@ -41,6 +41,12 @@ return [
         'reports' => [
             'packagePath' => 'typo3/sysext/reports/',
         ],
+        'setup' => [
+            'packagePath' => 'typo3/sysext/setup/',
+        ],
+        'rte_ckeditor' => [
+            'packagePath' => 'typo3/sysext/rte_ckeditor/',
+        ],
         'about' => [
             'packagePath' => 'typo3/sysext/about/',
         ],
@@ -74,9 +80,6 @@ return [
         'seo' => [
             'packagePath' => 'typo3/sysext/seo/',
         ],
-        'setup' => [
-            'packagePath' => 'typo3/sysext/setup/',
-        ],
         'sys_note' => [
             'packagePath' => 'typo3/sysext/sys_note/',
         ],
@@ -88,6 +91,12 @@ return [
         ],
         'viewpage' => [
             'packagePath' => 'typo3/sysext/viewpage/',
+        ],
+        'bootstrap_package' => [
+            'packagePath' => 'typo3conf/ext/bootstrap_package/',
+        ],
+        'book_store_site' => [
+            'packagePath' => 'typo3conf/ext/book_store_site/',
         ],
     ],
     'version' => 5,

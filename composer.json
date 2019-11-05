@@ -29,6 +29,17 @@
         "typo3/cms-sys-note": "^9.5",
         "typo3/cms-t3editor": "^9.5",
         "typo3/cms-tstemplate": "^9.5",
-        "typo3/cms-viewpage": "^9.5"
+        "typo3/cms-viewpage": "^9.5",
+        "cweagans/composer-patches": "^1.6",
+        "oliver-hader/book-store-site": "^1.0"
+    },
+    "repositories": {
+        "local": {
+            "type": "path",
+            "url": "packages/*"
+        }
+    },
+    "extra": {
+        "patches-file": "composer.patches.json"
     }
 }

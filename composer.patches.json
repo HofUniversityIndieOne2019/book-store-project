@@ -1,0 +1,7 @@
+{
+  "patches": {
+    "bk2k/bootstrap-package": {
+      "PR #585": "https://github.com/ohader/bootstrap_package/commit/0eada54383f4a055a0aaae5f986de2e352acf063.patch"
+    }
+  }
+}
