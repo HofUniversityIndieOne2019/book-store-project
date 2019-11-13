@@ -58,3 +58,23 @@ plugin.bootstrap_package.settings.scss {
     primary = #eb3e4a
     secondary = #013859
 }
+
+page {
+    theme.copyright.text = Running with <a href="http://www.typo3.org" rel="noopener" target="_blank">TYPO3</a> and <a href="https://www.bootstrap-package.com" rel="noopener" target="_blank">Our own Bootstrap Package</a>.
+    preloader.enable = 0
+    logo {
+        file = EXT:book_store_site/Resources/Public/Icons/book-store-logo.svg
+        fileInverted = EXT:book_store_site/Resources/Public/Icons/book-store-logo.svg
+        height = 200
+        width = 290
+    }
+    theme.googleFont.font = Source Sans Pro
+    theme.navigation.style = default
+}
+
+page.theme.navigation.type = top
+page.theme.breadcrumb.enableLevel = 1
+page.theme.meta.navigationValue = 5,4
+page.theme.cookieconsent.enable = 0
+
+plugin.bootstrap_package.settings.overrideParserVariables = 1

@@ -10,6 +10,7 @@
 page {
     includeCSS {
         theme = EXT:book_store_site/Resources/Public/Scss/Theme/theme.scss
+        my = EXT:book_store_site/Resources/Public/Css/my.css
     }
 
     includeJSLibs {
