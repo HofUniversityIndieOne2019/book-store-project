@@ -5,6 +5,7 @@
 /public/typo3conf/l10n/
 /public/typo3conf/ext/
 /public/typo3temp/
+/public/uploads/tx_extensionbuilder/backups
 /var/
 /vendor/
 /.idea/

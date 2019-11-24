@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ea933bffe31ad693d9e911d357d09724",
+    "content-hash": "9c5065ae94037dbe7c4fe04c0965d01e",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -1115,6 +1115,39 @@
             "homepage": "https://hof-university.de/",
             "keywords": [
                 "TYPO3 CMS"
+            ]
+        },
+        {
+            "name": "oliverhader/book-store-app",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "packages/book_store_app",
+                "reference": "4dbdf44f79ad1f3020d12bf07ae5ea58b708cabe"
+            },
+            "require": {
+                "typo3/cms-core": "^9.5"
+            },
+            "replace": {
+                "oliverhader/book-store-app": "self.version",
+                "typo3-ter/book-store-app": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "autoload": {
+                "psr-4": {
+                    "OliverHader\\BookStoreApp\\": "Classes"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "OliverHader\\BookStoreApp\\Tests\\": "Tests"
+                }
+            },
+            "authors": [
+                {
+                    "name": "Oliver Hader",
+                    "role": "Developer"
+                }
             ]
         },
         {
@@ -4535,10 +4568,77 @@
             "time": "2019-10-30T11:25:42+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "friendsoftypo3/extension-builder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfTYPO3/extension_builder.git",
+                "reference": "73af72313f9108bb307693adf845d9675ad736cb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfTYPO3/extension_builder/zipball/73af72313f9108bb307693adf845d9675ad736cb",
+                "reference": "73af72313f9108bb307693adf845d9675ad736cb",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "nikic/php-parser": "^4.0",
+                "typo3/cms-backend": "~9.5",
+                "typo3/cms-core": "~9.5"
+            },
+            "replace": {
+                "typo3-ter/extension-builder": "self.version"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2",
+                "nimut/testing-framework": "^4",
+                "sebastian/diff": "^3.0"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "web-dir": ".Build/Web"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "EBT\\ExtensionBuilder\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Nico de Haen",
+                    "role": "Developer"
+                },
+                {
+                    "name": "extension_builder Development Team",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Tool to kickstart and maintain TYPO3 extensions",
+            "homepage": "https://github.com/FriendsOfTYPO3/extension_builder",
+            "keywords": [
+                "extension",
+                "extension_builder",
+                "typo3"
+            ],
+            "time": "2019-11-24T16:00:52+00:00"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "oliverhader/book-store-app": 20,
+        "friendsoftypo3/extension-builder": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

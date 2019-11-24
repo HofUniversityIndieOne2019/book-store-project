@@ -1,0 +1,14 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<label for="name">
+	<f:translate key="tx_bookstoreapp_domain_model_author.name" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="name" /><br />
+<label for="dateOfBirth">
+	<f:translate key="tx_bookstoreapp_domain_model_author.date_of_birth" />
+</label><br />
+	<f:form.textfield property="dateOfBirth" value="{author.dateOfBirth->f:format.date()}" /><br />
+<label for="biography">
+	<f:translate key="tx_bookstoreapp_domain_model_author.biography" />
+</label><br />
+	<f:form.textarea property="biography" cols="40" rows="15" /><br />
+</html>

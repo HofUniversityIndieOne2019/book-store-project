@@ -1,0 +1,28 @@
+{
+    "name": "oliverhader/book-store-app",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "authors": [
+        {
+            "name": "Oliver Hader",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "OliverHader\\BookStoreApp\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "OliverHader\\BookStoreApp\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "oliverhader/book-store-app": "self.version",
+        "typo3-ter/book-store-app": "self.version"
+    }
+}

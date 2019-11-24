@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:book_store_app/Resources/Private/Language/locallang_csh" date="2019-11-24T20:04:49Z" product-name="book_store_app">
+		<header/>
+		<body>
+			<trans-unit id="isbn.description" resname="isbn.description">
+				<source>isbn</source>
+			</trans-unit>
+			<trans-unit id="title.description" resname="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="blurb.description" resname="blurb.description">
+				<source>blurb</source>
+			</trans-unit>
+			<trans-unit id="description.description" resname="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="price.description" resname="price.description">
+				<source>price</source>
+			</trans-unit>
+			<trans-unit id="pages.description" resname="pages.description">
+				<source>pages</source>
+			</trans-unit>
+			<trans-unit id="images.description" resname="images.description">
+				<source>images</source>
+			</trans-unit>
+			<trans-unit id="topics.description" resname="topics.description">
+				<source>topics</source>
+			</trans-unit>
+			<trans-unit id="authors.description" resname="authors.description">
+				<source>authors</source>
+			</trans-unit>
+			<trans-unit id="publisher.description" resname="publisher.description">
+				<source>publisher</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

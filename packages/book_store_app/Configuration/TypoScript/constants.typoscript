@@ -1,0 +1,15 @@
+
+plugin.tx_bookstoreapp_book {
+    view {
+        # cat=plugin.tx_bookstoreapp_book/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:book_store_app/Resources/Private/Templates/
+        # cat=plugin.tx_bookstoreapp_book/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:book_store_app/Resources/Private/Partials/
+        # cat=plugin.tx_bookstoreapp_book/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:book_store_app/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_bookstoreapp_book//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

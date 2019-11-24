@@ -1,0 +1,30 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<label for="isbn">
+	<f:translate key="tx_bookstoreapp_domain_model_book.isbn" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="isbn" /><br />
+<label for="title">
+	<f:translate key="tx_bookstoreapp_domain_model_book.title" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="title" /><br />
+<label for="blurb">
+	<f:translate key="tx_bookstoreapp_domain_model_book.blurb" />
+</label><br />
+	<f:form.textarea property="blurb" cols="40" rows="15" /><br />
+<label for="description">
+	<f:translate key="tx_bookstoreapp_domain_model_book.description" />
+</label><br />
+	<f:form.textarea property="description" cols="40" rows="15" /><br />
+<label for="price">
+	<f:translate key="tx_bookstoreapp_domain_model_book.price" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="price" /><br />
+<label for="pages">
+	<f:translate key="tx_bookstoreapp_domain_model_book.pages" />
+</label><br />
+	<f:form.textfield property="pages" /><br />
+<label for="images">
+	<f:translate key="tx_bookstoreapp_domain_model_book.images" />
+</label><br />
+	<span>File upload is not implemented!</span><br /><br />
+</html>
