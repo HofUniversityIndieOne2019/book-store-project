@@ -38,6 +38,9 @@ return [
         'backend' => [
             'packagePath' => 'typo3/sysext/backend/',
         ],
+        'recycler' => [
+            'packagePath' => 'typo3/sysext/recycler/',
+        ],
         'reports' => [
             'packagePath' => 'typo3/sysext/reports/',
         ],

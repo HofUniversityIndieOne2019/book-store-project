@@ -31,7 +31,8 @@
         "typo3/cms-tstemplate": "^9.5",
         "typo3/cms-viewpage": "^9.5",
         "cweagans/composer-patches": "^1.6",
-        "oliver-hader/book-store-site": "^1.0"
+        "oliver-hader/book-store-site": "^1.0",
+        "typo3/cms-recycler": "^9.5"
     },
     "repositories": {
         "local": {

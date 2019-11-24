@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1acdd43268aa37c23b9e71bfa69511b4",
+    "content-hash": "ea933bffe31ad693d9e911d357d09724",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -3835,6 +3835,55 @@
                 }
             ],
             "description": "List of database-records",
+            "homepage": "https://typo3.org",
+            "time": "2019-10-30T20:46:49+00:00"
+        },
+        {
+            "name": "typo3/cms-recycler",
+            "version": "v9.5.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/TYPO3-CMS/recycler.git",
+                "reference": "299f3790241dde9ee61727a6ce614f1c0708150a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/TYPO3-CMS/recycler/zipball/299f3790241dde9ee61727a6ce614f1c0708150a",
+                "reference": "299f3790241dde9ee61727a6ce614f1c0708150a",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "9.5.11"
+            },
+            "conflict": {
+                "typo3/cms": "*"
+            },
+            "suggest": {
+                "typo3/cms-scheduler": "Remove deleted records after given time"
+            },
+            "type": "typo3-cms-framework",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "recycler"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TYPO3\\CMS\\Recycler\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "TYPO3 Core Team",
+                    "email": "typo3cms@typo3.org",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The recycler offers the possibility to restore deleted records or remove them from the database permanently. These actions can be applied to a single record, multiple records, and recursively to child records (ex. restoring a page can restore all content elements on that page). Filtering by page and by table provides a quick overview of deleted records before taking action on them.",
             "homepage": "https://typo3.org",
             "time": "2019-10-30T20:46:49+00:00"
         },
