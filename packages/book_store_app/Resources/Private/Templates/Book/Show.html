@@ -27,15 +27,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
             </f:if>
         </div>
         <div class="col-6">
-            <p>
-                by
-                <f:for each="{book.authors}" as="author" iteration="iterator">
-                    <f:link.action action="show" controller="Author" arguments="{author: author}">
-                        {author.name}
-                    </f:link.action>
-                    <f:if condition="{iterator.isLast}"><f:else>,</f:else></f:if>
-                </f:for>
-            </p>
+            <f:render partial="Book/AuthorList" arguments="{authors: book.authors}" />
             <p>
                 released on ... date ...
             </p>

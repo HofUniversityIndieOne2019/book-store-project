@@ -1,0 +1,13 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+    <p>
+        Topics:
+        <f:for each="{topics}" as="topic" iteration="iterator">
+            <f:link.action action="show" controller="Topic" arguments="{topic: topic}">
+                {topic.name}
+            </f:link.action>
+            <f:if condition="{iterator.isLast}"><f:else>,</f:else></f:if>
+        </f:for>
+    </p>
+
+</html>
