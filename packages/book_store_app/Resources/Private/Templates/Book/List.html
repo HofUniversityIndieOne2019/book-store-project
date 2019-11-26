@@ -18,11 +18,17 @@ Otherwise your changes will be overwritten the next time you save the extension 
             <h2>Books - recent releases</h2>
         </div>
         <div class="col-6">
-            <form>
-                <input type="text" class="form-control" placeholder="search">
-            </form>
+            <f:form action="list" controller="Book" method="post">
+                <f:form.textfield name="search" placeholder="search" class="form-control" />
+            </f:form>
         </div>
     </div>
+
+    <f:if condition="{search}">
+        <div class="alert alert-info">
+            Searched for "{search}", found {books -> f:count()} results
+        </div>
+    </f:if>
 
     <f:for each="{books}" as="book">
         <div class="row">

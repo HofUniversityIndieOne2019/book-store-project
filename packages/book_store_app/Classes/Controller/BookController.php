@@ -34,13 +34,16 @@ class BookController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
     }
 
     /**
-     * action list
-     * 
-     * @return void
+     * @param string $search
      */
-    public function listAction()
+    public function listAction(string $search = null)
     {
-        $books = $this->bookRepository->findAll();
+        if ($search === null) {
+            $books = $this->bookRepository->findAll();
+        } else {
+            $books = $this->bookRepository->findBySearch($search);
+        }
+        $this->view->assign('search', $search);
         $this->view->assign('books', $books);
     }
 

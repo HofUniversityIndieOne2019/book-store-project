@@ -2,6 +2,9 @@
 namespace OliverHader\BookStoreApp\Domain\Repository;
 
 
+use OliverHader\BookStoreApp\Domain\Model\Book;
+use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
+
 /***
  *
  * This file is part of the "Book Store App" Extension for TYPO3 CMS.
@@ -17,4 +20,27 @@ namespace OliverHader\BookStoreApp\Domain\Repository;
  */
 class BookRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
+    /**
+     * @param string $search
+     * @return array|QueryResultInterface|Book[]
+     */
+    public function findBySearch(string $search)
+    {
+        $query = $this->createQuery();
+
+        $constraints = [];
+        $constraints[] = $query->like('title', '%' . $search . '%');
+        $constraints[] = $query->like('blurb', '%' . $search . '%');
+        $constraints[] = $query->like('authors.name', '%' . $search . '%');
+        $constraints[] = $query->like('topics.name', '%' . $search . '%');
+        $constraints[] = $query->like('publisher.country.name', '%' . $search . '%');
+
+        $query->matching(
+            $query->logicalOr(
+                $constraints
+            )
+        );
+
+        return $query->execute();
+    }
 }

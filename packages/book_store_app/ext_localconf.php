@@ -17,7 +17,7 @@ call_user_func(
             ],
             // non-cacheable actions
             [
-                'Book' => 'create, update, delete',
+                'Book' => 'list, create, update, delete',
                 'Topic' => 'create, update, delete',
                 'Author' => 'create, update, delete',
                 'Publisher' => 'create, update, delete',
