@@ -8,6 +8,7 @@ CREATE TABLE tx_bookstoreapp_domain_model_book (
 	blurb text,
 	description text,
 	price double(11,2) DEFAULT '0.00' NOT NULL,
+	publication_date date DEFAULT NULL,
 	pages int(11) DEFAULT '0' NOT NULL,
 	images int(11) unsigned DEFAULT '0' NOT NULL,
 	topics text NOT NULL,

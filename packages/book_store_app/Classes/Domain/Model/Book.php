@@ -95,6 +95,14 @@ class Book extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $publisher = null;
 
     /**
+     * publicationDate
+     * 
+     * @var \DateTime
+     * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
+     */
+    protected $publicationDate = null;
+
+    /**
      * __construct
      */
     public function __construct()
@@ -393,5 +401,26 @@ class Book extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setPublisher(\OliverHader\BookStoreApp\Domain\Model\Publisher $publisher)
     {
         $this->publisher = $publisher;
+    }
+
+    /**
+     * Returns the publicationDate
+     * 
+     * @return \DateTime $publicationDate
+     */
+    public function getPublicationDate()
+    {
+        return $this->publicationDate;
+    }
+
+    /**
+     * Sets the publicationDate
+     * 
+     * @param \DateTime $publicationDate
+     * @return void
+     */
+    public function setPublicationDate(\DateTime $publicationDate)
+    {
+        $this->publicationDate = $publicationDate;
     }
 }

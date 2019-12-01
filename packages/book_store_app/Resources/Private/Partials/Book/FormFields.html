@@ -19,6 +19,10 @@
 	<f:translate key="tx_bookstoreapp_domain_model_book.price" /> <span class="required">(required)</span>
 </label><br />
 	<f:form.textfield property="price" /><br />
+<label for="publicationDate">
+	<f:translate key="tx_bookstoreapp_domain_model_book.publication_date" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="publicationDate" value="{book.publicationDate->f:format.date()}" /><br />
 <label for="pages">
 	<f:translate key="tx_bookstoreapp_domain_model_book.pages" />
 </label><br />

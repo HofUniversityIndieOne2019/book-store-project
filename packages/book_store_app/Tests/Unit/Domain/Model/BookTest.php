@@ -154,6 +154,32 @@ class BookTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
     /**
      * @test
      */
+    public function getPublicationDateReturnsInitialValueForDateTime()
+    {
+        self::assertEquals(
+            null,
+            $this->subject->getPublicationDate()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setPublicationDateForDateTimeSetsPublicationDate()
+    {
+        $dateTimeFixture = new \DateTime();
+        $this->subject->setPublicationDate($dateTimeFixture);
+
+        self::assertAttributeEquals(
+            $dateTimeFixture,
+            'publicationDate',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
     public function getPagesReturnsInitialValueForInt()
     {
         self::assertSame(

@@ -20,10 +20,10 @@ return [
         'iconfile' => 'EXT:book_store_app/Resources/Public/Icons/tx_bookstoreapp_domain_model_book.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, isbn, title, blurb, description, price, pages, images, topics, authors, publisher',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, isbn, title, blurb, description, price, publication_date, pages, images, topics, authors, publisher',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, isbn, title, blurb, description, price, pages, images, topics, authors, publisher, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, isbn, title, blurb, description, price, publication_date, pages, images, topics, authors, publisher, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -170,6 +170,18 @@ return [
                 'size' => 30,
                 'eval' => 'double2,required'
             ]
+        ],
+        'publication_date' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_book.publication_date',
+            'config' => [
+                'dbType' => 'date',
+                'type' => 'input',
+                'renderType' => 'inputDateTime',
+                'size' => 7,
+                'eval' => 'date,required',
+                'default' => null,
+            ],
         ],
         'pages' => [
             'exclude' => true,

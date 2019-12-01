@@ -90,6 +90,17 @@
                         },
                         {
                             "allowedFileTypes": "",
+                            "maxItems": "10",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": true,
+                            "propertyName": "publicationDate",
+                            "propertyType": "NativeDate",
+                            "uid": "1293048916522"
+                        },
+                        {
+                            "allowedFileTypes": "",
                             "maxItems": "1",
                             "propertyDescription": "",
                             "propertyIsExcludeField": true,
