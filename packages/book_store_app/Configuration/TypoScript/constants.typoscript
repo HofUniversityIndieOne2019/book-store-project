@@ -12,4 +12,24 @@ plugin.tx_bookstoreapp_book {
         # cat=plugin.tx_bookstoreapp_book//a; type=string; label=Default storage PID
         storagePid =
     }
+    settings {
+    	pages {
+    		# cat=plugin.tx_bookstoreapp_book//a; type=string; label=Page ID for rendering overview
+    		overview =
+    		# cat=plugin.tx_bookstoreapp_book//a; type=string; label=Page ID for rendering books
+    		book =
+    		# cat=plugin.tx_bookstoreapp_book//a; type=string; label=Page ID for rendering authors
+    		author =
+    		# cat=plugin.tx_bookstoreapp_book//a; type=string; label=Page ID for rendering topics
+    		topic =
+    	}
+    	images {
+    		# cat=plugin.tx_bookstoreapp_book//a; type=string; label=Image location for book teaser
+    		book =
+    		# cat=plugin.tx_bookstoreapp_book//a; type=string; label=Image location for author teaser
+    		author =
+    		# cat=plugin.tx_bookstoreapp_book//a; type=string; label=Image location for topic teaser
+    		topic =
+    	}
+    }
 }

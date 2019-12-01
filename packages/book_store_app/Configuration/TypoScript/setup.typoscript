@@ -22,6 +22,19 @@ plugin.tx_bookstoreapp {
     mvc {
         #callDefaultActionIfActionCantBeResolved = 1
     }
+    settings {
+    	pages {
+    		overview = {$plugin.tx_bookstoreapp_book.settings.pages.overview}
+    		book = {$plugin.tx_bookstoreapp_book.settings.pages.book}
+    		author = {$plugin.tx_bookstoreapp_book.settings.pages.author}
+    		topic = {$plugin.tx_bookstoreapp_book.settings.pages.topic}
+    	}
+    	images {
+    		book = {$plugin.tx_bookstoreapp_book.settings.images.book}
+    		author = {$plugin.tx_bookstoreapp_book.settings.images.author}
+    		topic = {$plugin.tx_bookstoreapp_book.settings.images.topic}
+    	}
+    }
 }
 
 # these classes are only used in auto-generated templates

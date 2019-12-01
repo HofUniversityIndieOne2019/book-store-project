@@ -19,18 +19,10 @@ call_user_func(
             'Book',
             [
                 'Book' => 'list, show, new, create, edit, update, delete',
-                'Topic' => 'list, show, new, create, edit, update, delete',
-                'Author' => 'list, show, new, create, edit, update, delete',
-                'Publisher' => 'list, show, new, create, edit, update, delete',
-                'Country' => 'list, show, new, create, edit, update, delete'
             ],
             // non-cacheable actions
             [
-                'Book' => 'list, create, update, delete',
-                'Topic' => 'create, update, delete',
-                'Author' => 'create, update, delete',
-                'Publisher' => 'create, update, delete',
-                'Country' => 'create, update, delete'
+                'Book' => 'list, show, new, create, edit, update, delete',
             ]
         );
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(

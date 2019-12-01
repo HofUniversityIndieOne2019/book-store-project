@@ -13,8 +13,87 @@ in /Configuration/ExtensionBuilder/settings.yaml:
 Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 <f:section name="content">
-    <f:debug>{books}</f:debug>
-    <f:debug>{authors}</f:debug>
-    <f:debug>{topics}</f:debug>
+    <div class="row">
+        <div class="col-12 col-md-4 mb-3">
+            <div class="border rounded shadow p-3">
+                <div class="text-center">
+                    <f:if condition="{settings.images.book}">
+                        <f:then>
+                            <f:image src="{settings.images.book}" maxHeight="200" class="img-fluid" />
+                        </f:then>
+                        <f:else>
+                            <f:image src="EXT:book_store_app/Resources/Public/Images/no-camera.svg" maxHeight="200" class="img-fluid" />
+                        </f:else>
+                    </f:if>
+                </div>
+                <hr>
+                <h4>Recent Books</h4>
+                <f:for each="{books}" as="book">
+                    <div class="row">
+                        <div class="col-8">
+                            <f:link.action action="show" controller="Book" pageUid="{settings.pages.book}" arguments="{book: book}">
+                                {book.title}
+                            </f:link.action>
+                        </div>
+                        <div class="col-4 text-right">{book.publicationDate -> f:format.date(format:'M Y')}</div>
+                    </div>
+                </f:for>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4 mb-3">
+            <div class="border rounded shadow p-3">
+                <div class="text-center">
+                    <f:if condition="{settings.images.author}">
+                        <f:then>
+                            <f:image src="{settings.images.author}" maxHeight="200" class="img-fluid" />
+                        </f:then>
+                        <f:else>
+                            <f:image src="EXT:book_store_app/Resources/Public/Images/no-camera.svg" maxHeight="200" class="img-fluid" />
+                        </f:else>
+                    </f:if>
+                </div>
+                <hr>
+                <h4>Recent publications</h4>
+                <f:for each="{authorPublications}" as="authorPublication">
+                    <div class="row">
+                        <div class="col-8">
+                            <f:link.action action="show" controller="Author" pageUid="{settings.pages.author}" arguments="{author: authorPublication.author}">
+                                {authorPublication.name}
+                            </f:link.action>
+                        </div>
+                        <div class="col-4 text-right">{authorPublication.publicationDate -> f:format.date(format:'M Y')}</div>
+                    </div>
+                </f:for>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4 mb-3">
+            <div class="border rounded shadow p-3">
+                <div class="text-center">
+                    <f:if condition="{settings.images.topic}">
+                        <f:then>
+                            <f:image src="{settings.images.topic}" maxHeight="200" class="img-fluid" />
+                        </f:then>
+                        <f:else>
+                            <f:image src="EXT:book_store_app/Resources/Public/Images/no-camera.svg" maxHeight="200" class="img-fluid" />
+                        </f:else>
+                    </f:if>
+                </div>
+                <hr>
+                <h4>Featured Topics</h4>
+                <f:for each="{topics}" as="topic" iteration="iterator">
+                    <div class="row">
+                        <div class="col-8">
+                            <f:link.action action="show" controller="Topic" pageUid="{settings.pages.topic}" arguments="{topic: topic}">
+                                {topic.name}
+                            </f:link.action>
+                        </div>
+                        <div class="col-4 text-right">#{iterator.cycle}</div>
+                    </div>
+                </f:for>
+            </div>
+        </div>
+    </div>
 </f:section>
 </html>
