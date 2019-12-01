@@ -24,6 +24,21 @@ call_user_func(
                 'Country' => 'create, update, delete'
             ]
         );
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'OliverHader.BookStoreApp',
+            'Author',
+            [
+                'Author' => 'list, show, new, create, edit, update, delete',
+                'Publisher' => 'list, show, new, create, edit, update, delete',
+                'Country' => 'list, show, new, create, edit, update, delete'
+            ],
+            // non-cacheable actions
+            [
+                'Author' => 'list, show, new, create, edit, update, delete',
+                'Publisher' => 'list, show, new, create, edit, update, delete',
+                'Country' => 'list, show, new, create, edit, update, delete'
+            ]
+        );
 
         // wizards
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
@@ -39,6 +54,15 @@ call_user_func(
                                 list_type = bookstoreapp_book
                             }
                         }
+                        author {
+                            iconIdentifier = book_store_app-plugin-author
+                            title = Author
+                            description = Renders all authors
+                            tt_content_defValues {
+                                CType = list
+                                list_type = bookstoreapp_author
+                            }
+                        }
                     }
                     show = *
                 }
@@ -51,6 +75,11 @@ call_user_func(
 				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
 				['source' => 'EXT:book_store_app/Resources/Public/Icons/user_plugin_book.svg']
 			);
-		
+			$iconRegistry->registerIcon(
+				'book_store_app-plugin-author',
+				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+				['source' => 'EXT:book_store_app/Resources/Public/Icons/user_plugin_book.svg']
+			);
+
     }
 );

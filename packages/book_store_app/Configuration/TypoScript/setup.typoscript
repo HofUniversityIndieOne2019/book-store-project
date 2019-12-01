@@ -1,5 +1,5 @@
 
-plugin.tx_bookstoreapp_book {
+plugin.tx_bookstoreapp {
     view {
         templateRootPaths.0 = EXT:book_store_app/Resources/Private/Templates/
         templateRootPaths.1 = {$plugin.tx_bookstoreapp_book.view.templateRootPath}
