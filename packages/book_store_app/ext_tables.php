@@ -15,6 +15,11 @@ call_user_func(
             'Author',
             'Author handling'
         );
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'OliverHader.BookStoreApp',
+            'Topic',
+            'Topic handling'
+        );
 
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile('book_store_app', 'Configuration/TypoScript', 'Book Store App');
 

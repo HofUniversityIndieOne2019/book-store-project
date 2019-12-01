@@ -39,6 +39,17 @@ call_user_func(
                 'Country' => 'list, show, new, create, edit, update, delete'
             ]
         );
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'OliverHader.BookStoreApp',
+            'Topic',
+            [
+                'Topic' => 'list, show, new, create, edit, update, delete',
+            ],
+            // non-cacheable actions
+            [
+                'Topic' => 'list, show, new, create, edit, update, delete',
+            ]
+        );
 
         // wizards
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
@@ -61,6 +72,15 @@ call_user_func(
                             tt_content_defValues {
                                 CType = list
                                 list_type = bookstoreapp_author
+                            }
+                        }
+                        topic {
+                            iconIdentifier = book_store_app-plugin-topic
+                            title = Topic
+                            description = Renders all topics
+                            tt_content_defValues {
+                                CType = list
+                                list_type = bookstoreapp_topic
                             }
                         }
                     }
