@@ -364,7 +364,7 @@ class Book extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the authors
      * 
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\OliverHader\BookStoreApp\Domain\Model\Author> $authors
+     * @return Author[]|\TYPO3\CMS\Extbase\Persistence\ObjectStorage<\OliverHader\BookStoreApp\Domain\Model\Author>
      */
     public function getAuthors()
     {

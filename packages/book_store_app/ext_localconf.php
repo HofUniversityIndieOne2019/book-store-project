@@ -4,7 +4,16 @@ defined('TYPO3_MODE') || die('Access denied.');
 call_user_func(
     function()
     {
-
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'OliverHader.BookStoreApp',
+            'Overview',
+            [
+                'Dashboard' => 'overview',
+            ],
+            // non-cacheable actions
+            [
+            ]
+        );
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'OliverHader.BookStoreApp',
             'Book',
@@ -56,6 +65,15 @@ call_user_func(
             'mod {
                 wizards.newContentElement.wizardItems.plugins {
                     elements {
+                        overview {
+                            iconIdentifier = book_store_app-plugin-overview
+                            title = Books overview
+                            description = Books overview
+                            tt_content_defValues {
+                                CType = list
+                                list_type = bookstoreapp_overview
+                            }
+                        }
                         book {
                             iconIdentifier = book_store_app-plugin-book
                             title = LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_book_store_app_book.name

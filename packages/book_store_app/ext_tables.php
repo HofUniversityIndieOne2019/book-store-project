@@ -7,6 +7,11 @@ call_user_func(
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'OliverHader.BookStoreApp',
+            'Overview',
+            'Books overview'
+        );
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'OliverHader.BookStoreApp',
             'Book',
             'Book'
         );

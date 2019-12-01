@@ -1,8 +1,8 @@
 <?php
 namespace OliverHader\BookStoreApp\Domain\Repository;
 
-
 use OliverHader\BookStoreApp\Domain\Model\Book;
+use TYPO3\CMS\Extbase\Persistence\QueryInterface;
 use TYPO3\CMS\Extbase\Persistence\QueryResultInterface;
 
 /***
@@ -41,6 +41,22 @@ class BookRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
             )
         );
 
+        return $query->execute();
+    }
+
+    /**
+     * @param int|null $limit
+     * @return array|QueryResultInterface|Book[]
+     */
+    public function findRecent(?int $limit = 5)
+    {
+        $query = $this->createQuery();
+        $query->setOrderings([
+            'publicationDate' => QueryInterface::ORDER_DESCENDING
+        ]);
+        if ($limit !== null) {
+            $query->setLimit($limit);
+        }
         return $query->execute();
     }
 }
