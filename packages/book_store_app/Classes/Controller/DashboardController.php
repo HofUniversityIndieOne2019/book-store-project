@@ -62,12 +62,12 @@ class DashboardController extends ActionController
     public function overviewAction()
     {
         $books = $this->bookRepository->findRecent(3);
-        $authors = $this->findRecentAuthorPublications(3);
         $topics = $this->topicRepository->findSorted(3);
+        $authorPublications = $this->findRecentAuthorPublications(3);
 
         $this->view->assign('books', $books);
-        $this->view->assign('authors', $authors);
         $this->view->assign('topics', $topics);
+        $this->view->assign('authorPublications', $authorPublications);
     }
 
     /**

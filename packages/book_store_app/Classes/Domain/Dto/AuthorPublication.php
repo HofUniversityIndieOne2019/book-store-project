@@ -38,6 +38,11 @@ class AuthorPublication
         return $this->book;
     }
 
+    public function getName(): string
+    {
+        return $this->author->getName();
+    }
+
     public function getPublicationDate(): \DateTime
     {
         return $this->book->getPublicationDate();
