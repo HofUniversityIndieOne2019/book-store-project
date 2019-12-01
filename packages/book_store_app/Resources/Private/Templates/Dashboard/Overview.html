@@ -31,7 +31,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                 <f:for each="{books}" as="book">
                     <div class="row">
                         <div class="col-8">
-                            <f:link.action action="show" controller="Book" pageUid="{settings.pages.book}" arguments="{book: book}">
+                            <f:link.action action="show" controller="Book" pageUid="{settings.pages.book}" arguments="{book: book, back: 'overview'}">
                                 {book.title}
                             </f:link.action>
                         </div>
@@ -58,7 +58,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                 <f:for each="{authorPublications}" as="authorPublication">
                     <div class="row">
                         <div class="col-8">
-                            <f:link.action action="show" controller="Author" pageUid="{settings.pages.author}" arguments="{author: authorPublication.author}">
+                            <f:link.action action="show" controller="Author" pageUid="{settings.pages.author}" arguments="{author: authorPublication.author, back: 'overview'}">
                                 {authorPublication.name}
                             </f:link.action>
                         </div>
@@ -85,7 +85,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
                 <f:for each="{topics}" as="topic" iteration="iterator">
                     <div class="row">
                         <div class="col-8">
-                            <f:link.action action="show" controller="Topic" pageUid="{settings.pages.topic}" arguments="{topic: topic}">
+                            <f:link.action action="show" controller="Topic" pageUid="{settings.pages.topic}" arguments="{topic: topic, back: 'overview'}">
                                 {topic.name}
                             </f:link.action>
                         </div>

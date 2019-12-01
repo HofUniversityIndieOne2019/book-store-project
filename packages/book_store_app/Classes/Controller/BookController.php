@@ -51,11 +51,13 @@ class BookController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * action show
      * 
      * @param \OliverHader\BookStoreApp\Domain\Model\Book $book
+     * @param string $back
      * @return void
      */
-    public function showAction(\OliverHader\BookStoreApp\Domain\Model\Book $book)
+    public function showAction(\OliverHader\BookStoreApp\Domain\Model\Book $book, string $back = null)
     {
         $this->view->assign('book', $book);
+        $this->view->assign('back', $back);
     }
 
     /**

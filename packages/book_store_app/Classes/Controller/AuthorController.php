@@ -48,11 +48,13 @@ class AuthorController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControlle
      * action show
      * 
      * @param \OliverHader\BookStoreApp\Domain\Model\Author $author
+     * @param string $back
      * @return void
      */
-    public function showAction(\OliverHader\BookStoreApp\Domain\Model\Author $author)
+    public function showAction(\OliverHader\BookStoreApp\Domain\Model\Author $author, string $back = null)
     {
         $this->view->assign('author', $author);
+        $this->view->assign('back', $back);
     }
 
     /**

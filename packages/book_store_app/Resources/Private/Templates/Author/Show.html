@@ -17,7 +17,16 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
     <f:flashMessages />
     <f:render partial="Author/Properties" arguments="{author:author}" />
-    <f:link.action action="list">Back to list</f:link.action><br />
-    <f:link.action action="new">New Author</f:link.action>
+
+    <f:switch expression="{back}">
+        <f:case value="overview">
+            <f:link.action action="overview" controller="Dashboard" pluginName="Overview" pageUid="{settings.pages.overview}">
+                Back to list
+            </f:link.action>
+        </f:case>
+        <f:defaultCase>
+            <f:link.action action="list">Back to list</f:link.action><br />
+        </f:defaultCase>
+    </f:switch>
 </f:section>
 </html>

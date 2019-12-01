@@ -48,11 +48,13 @@ class TopicController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
      * action show
      * 
      * @param \OliverHader\BookStoreApp\Domain\Model\Topic $topic
+     * @param string $back
      * @return void
      */
-    public function showAction(\OliverHader\BookStoreApp\Domain\Model\Topic $topic)
+    public function showAction(\OliverHader\BookStoreApp\Domain\Model\Topic $topic, string $back = null)
     {
         $this->view->assign('topic', $topic);
+        $this->view->assign('back', $back);
     }
 
     /**

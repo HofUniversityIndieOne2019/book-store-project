@@ -69,7 +69,15 @@ Otherwise your changes will be overwritten the next time you save the extension 
         </div>
     </div>
 
-    <f:link.action action="list">Back to list</f:link.action><br />
-    <f:link.action action="new">New Book</f:link.action>
+    <f:switch expression="{back}">
+        <f:case value="overview">
+            <f:link.action action="overview" controller="Dashboard" pluginName="Overview" pageUid="{settings.pages.overview}">
+                Back to list
+            </f:link.action>
+        </f:case>
+        <f:defaultCase>
+            <f:link.action action="list">Back to list</f:link.action>
+        </f:defaultCase>
+    </f:switch>
 </f:section>
 </html>
