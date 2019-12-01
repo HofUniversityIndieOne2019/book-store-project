@@ -189,7 +189,7 @@
                     "description": "",
                     "mapToTable": "",
                     "parentClass": "",
-                    "sorting": false,
+                    "sorting": true,
                     "type": "Entity",
                     "uid": "108035793436"
                 },
