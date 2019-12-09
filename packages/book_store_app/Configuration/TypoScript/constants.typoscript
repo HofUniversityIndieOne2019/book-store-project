@@ -22,6 +22,8 @@ plugin.tx_bookstoreapp_book {
     		author =
     		# cat=plugin.tx_bookstoreapp_book//a; type=string; label=Page ID for rendering topics
     		topic =
+    		# cat=plugin.tx_bookstoreapp_book//a; type=string; label=Page ID for rendering wishlist
+    		wishlist =
     	}
     	images {
     		# cat=plugin.tx_bookstoreapp_book//a; type=string; label=Image location for book teaser

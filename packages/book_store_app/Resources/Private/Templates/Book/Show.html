@@ -54,7 +54,10 @@ Otherwise your changes will be overwritten the next time you save the extension 
                 </strong>
             </p>
             <div>
-                <a class="btn btn-info" role="button">add to wishlish</a>
+                <f:link.action action="add" controller="Wishlist" pluginName="Wishlist" arguments="{book:book}"
+                               pageUid="{settings.pages.wishlist}" class="btn btn-info">
+                    add to wishlist
+                </f:link.action>
             </div>
             <div>
                 <a class="btn btn-primary" role="button">add to cart</a>

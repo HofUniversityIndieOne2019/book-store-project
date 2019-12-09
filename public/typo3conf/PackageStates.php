@@ -110,6 +110,9 @@ return [
         'extension_builder' => [
             'packagePath' => 'typo3conf/ext/extension_builder/',
         ],
+        'session_service' => [
+            'packagePath' => 'typo3conf/ext/session_service/',
+        ],
     ],
     'version' => 5,
 ];

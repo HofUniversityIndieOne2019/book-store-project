@@ -34,7 +34,8 @@
         "oliver-hader/book-store-site": "^1.0",
         "typo3/cms-recycler": "^9.5",
         "oliverhader/book-store-app": "dev-master",
-        "typo3/cms-felogin": "^9.5"
+        "typo3/cms-felogin": "^9.5",
+        "oliver-hader/session-service": "^1.1"
     },
     "repositories": {
         "local": {

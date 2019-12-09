@@ -1,0 +1,56 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+    <h1>Wishlist</h1>
+
+    <f:if condition="{customer}">
+        Hello {customer.name}!
+    </f:if>
+
+    <f:for each="{wishlist.books}" as="book">
+        <div class="row">
+            <div class="col-3">
+                <f:link.action action="show" controller="Book" arguments="{book: book}">
+                    <f:if condition="{book.images}">
+                        <f:then>
+                            <f:image src="{book.images.0.originalResource.publicUrl}" maxWidth="200" maxHeight="200" />
+                        </f:then>
+                        <f:else>
+                            No images given...
+                        </f:else>
+                    </f:if>
+                </f:link.action>
+            </div>
+            <div class="col-6">
+                <h3>
+                    <f:link.action action="show" controller="Book" arguments="{book: book}">
+                        {book.title}
+                    </f:link.action>
+                </h3>
+                <f:render partial="Book/AuthorList" arguments="{authors: book.authors}" />
+                <p>{book.blurb -> f:format.nl2br()}</p>
+                <f:render partial="Book/TopicList" arguments="{topics: book.topics}" />
+            </div>
+            <div class="col-3">
+                <p>
+                    <strong>
+                        {book.price -> f:format.currency(currencySign: '€')}
+                    </strong>
+                </p>
+                <div>
+                    <f:link.action action="remove" controller="Wishlist" pluginName="Wishlist" arguments="{book:book}"
+                                   pageUid="{settings.pages.wishlist}" class="btn btn-warning">
+                        remove from wishlist
+                    </f:link.action>
+                </div>
+                <div>
+                    <a class="btn btn-primary" role="button">add to cart</a>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </f:for>
+
+</f:section>
+</html>

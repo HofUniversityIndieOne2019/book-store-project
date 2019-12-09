@@ -28,6 +28,7 @@ plugin.tx_bookstoreapp {
     		book = {$plugin.tx_bookstoreapp_book.settings.pages.book}
     		author = {$plugin.tx_bookstoreapp_book.settings.pages.author}
     		topic = {$plugin.tx_bookstoreapp_book.settings.pages.topic}
+    		wishlist = {$plugin.tx_bookstoreapp_book.settings.pages.wishlist}
     	}
     	images {
     		book = {$plugin.tx_bookstoreapp_book.settings.images.book}

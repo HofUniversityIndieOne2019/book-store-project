@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5ec0f7cede20833feeb199f1deb8a535",
+    "content-hash": "8215a5268e938bf34cce77222ff1f12b",
     "packages": [
         {
             "name": "algo26-matthias/idna-convert",
@@ -1116,6 +1116,43 @@
             "keywords": [
                 "TYPO3 CMS"
             ]
+        },
+        {
+            "name": "oliver-hader/session-service",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ohader/session-service.git",
+                "reference": "91261eb4694066bffa8e6c2257f7579a75fa8591"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ohader/session-service/zipball/91261eb4694066bffa8e6c2257f7579a75fa8591",
+                "reference": "91261eb4694066bffa8e6c2257f7579a75fa8591",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": "^7.2",
+                "typo3/cms-core": "^9.5"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "session_service"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "OliverHader\\SessionService\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "TYPO3 Extbase session & frontend user service",
+            "time": "2019-12-09T21:45:40+00:00"
         },
         {
             "name": "oliverhader/book-store-app",

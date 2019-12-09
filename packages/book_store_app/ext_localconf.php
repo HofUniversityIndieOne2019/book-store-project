@@ -6,6 +6,17 @@ call_user_func(
     {
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'OliverHader.BookStoreApp',
+            'Wishlist',
+            [
+                'Wishlist' => 'show, add, remove, purge',
+            ],
+            // non-cacheable actions
+            [
+                'Wishlist' => 'show, add, remove, purge',
+            ]
+        );
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'OliverHader.BookStoreApp',
             'Overview',
             [
                 'Dashboard' => 'overview',
