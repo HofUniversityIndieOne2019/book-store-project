@@ -65,6 +65,9 @@ return [
         'extensionmanager' => [
             'packagePath' => 'typo3/sysext/extensionmanager/',
         ],
+        'felogin' => [
+            'packagePath' => 'typo3/sysext/felogin/',
+        ],
         'frontend' => [
             'packagePath' => 'typo3/sysext/frontend/',
         ],

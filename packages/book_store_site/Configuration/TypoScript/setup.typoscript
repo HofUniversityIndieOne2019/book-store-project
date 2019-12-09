@@ -28,4 +28,6 @@ page {
     includeJSFooter {
         book_store_site_scripts = EXT:book_store_site/Resources/Public/JavaScript/Dist/scripts.js
     }
+
+    10.settings.page.logout = {$page.logout}
 }

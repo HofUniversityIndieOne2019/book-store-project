@@ -60,6 +60,8 @@ plugin.bootstrap_package.settings.scss {
 }
 
 page {
+    # cat=plugin.tx_bookstoresite//a; type=int+; label=Page ID used for logout
+    logout = 21
     theme.copyright.text = Running with <a href="http://www.typo3.org" rel="noopener" target="_blank">TYPO3</a> and <a href="https://www.bootstrap-package.com" rel="noopener" target="_blank">Our own Bootstrap Package</a>.
     preloader.enable = 0
     logo {
