@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:book_store_app/Resources/Private/Language/locallang" date="2019-12-01T17:16:15Z" product-name="book_store_app">
+	<file source-language="en" datatype="plaintext" original="EXT:book_store_app/Resources/Private/Language/locallang" date="2019-12-09T20:22:46Z" product-name="book_store_app">
 		<header/>
 		<body>
 			<trans-unit id="tx_bookstoreapp_domain_model_book" resname="tx_bookstoreapp_domain_model_book">
@@ -77,6 +77,24 @@
 			</trans-unit>
 			<trans-unit id="tx_bookstoreapp_domain_model_country.name" resname="tx_bookstoreapp_domain_model_country.name">
 				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_bookstoreapp_domain_model_customer" resname="tx_bookstoreapp_domain_model_customer">
+				<source>Customer</source>
+			</trans-unit>
+			<trans-unit id="tx_bookstoreapp_domain_model_customer.customer_id" resname="tx_bookstoreapp_domain_model_customer.customer_id">
+				<source>Customer Id</source>
+			</trans-unit>
+			<trans-unit id="tx_bookstoreapp_domain_model_customer.name" resname="tx_bookstoreapp_domain_model_customer.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_bookstoreapp_domain_model_customer.user" resname="tx_bookstoreapp_domain_model_customer.user">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="tx_bookstoreapp_domain_model_wishlist" resname="tx_bookstoreapp_domain_model_wishlist">
+				<source>Wishlist</source>
+			</trans-unit>
+			<trans-unit id="tx_bookstoreapp_domain_model_wishlist.books" resname="tx_bookstoreapp_domain_model_wishlist.books">
+				<source>Books</source>
 			</trans-unit>
 		</body>
 	</file>

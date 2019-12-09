@@ -57,3 +57,23 @@ CREATE TABLE tx_bookstoreapp_domain_model_country (
 	name varchar(255) DEFAULT '' NOT NULL
 
 );
+
+#
+# Table structure for table 'tx_bookstoreapp_domain_model_customer'
+#
+CREATE TABLE tx_bookstoreapp_domain_model_customer (
+
+	customer_id varchar(255) DEFAULT '' NOT NULL,
+	name varchar(255) DEFAULT '' NOT NULL,
+	user int(11) unsigned DEFAULT '0'
+
+);
+
+#
+# Table structure for table 'tx_bookstoreapp_domain_model_wishlist'
+#
+CREATE TABLE tx_bookstoreapp_domain_model_wishlist (
+
+	books text NOT NULL
+
+);

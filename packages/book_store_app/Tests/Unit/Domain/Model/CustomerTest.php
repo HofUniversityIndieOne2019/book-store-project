@@ -1,0 +1,90 @@
+<?php
+namespace OliverHader\BookStoreApp\Tests\Unit\Domain\Model;
+
+/**
+ * Test case.
+ *
+ * @author Oliver Hader <oliver.hader.2@hof-university.de>
+ */
+class CustomerTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
+{
+    /**
+     * @var \OliverHader\BookStoreApp\Domain\Model\Customer
+     */
+    protected $subject = null;
+
+    protected function setUp()
+    {
+        parent::setUp();
+        $this->subject = new \OliverHader\BookStoreApp\Domain\Model\Customer();
+    }
+
+    protected function tearDown()
+    {
+        parent::tearDown();
+    }
+
+    /**
+     * @test
+     */
+    public function getCustomerIdReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getCustomerId()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setCustomerIdForStringSetsCustomerId()
+    {
+        $this->subject->setCustomerId('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'customerId',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getNameReturnsInitialValueForString()
+    {
+        self::assertSame(
+            '',
+            $this->subject->getName()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setNameForStringSetsName()
+    {
+        $this->subject->setName('Conceived at T3CON10');
+
+        self::assertAttributeEquals(
+            'Conceived at T3CON10',
+            'name',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function getUserReturnsInitialValueForFrontendUser()
+    {
+    }
+
+    /**
+     * @test
+     */
+    public function setUserForFrontendUserSetsUser()
+    {
+    }
+}
