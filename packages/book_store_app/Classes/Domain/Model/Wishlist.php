@@ -22,7 +22,6 @@ class Wishlist extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * books
      * 
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\OliverHader\BookStoreApp\Domain\Model\Book>
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
     protected $books = null;
 

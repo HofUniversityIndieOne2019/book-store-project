@@ -67,7 +67,6 @@ class Book extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * images
      * 
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\CMS\Extbase\Domain\Model\FileReference>
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
     protected $images = null;
 
@@ -75,7 +74,6 @@ class Book extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * topics
      * 
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\OliverHader\BookStoreApp\Domain\Model\Topic>
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
     protected $topics = null;
 
@@ -83,7 +81,6 @@ class Book extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * authors
      * 
      * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\OliverHader\BookStoreApp\Domain\Model\Author>
-     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
      */
     protected $authors = null;
 
