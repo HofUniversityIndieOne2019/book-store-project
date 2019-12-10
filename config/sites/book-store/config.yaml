@@ -63,8 +63,8 @@ routeEnhancers:
     plugin: Author
     defaultController: 'Author::list'
     routes:
-      - { _controller: 'Author::list', routePath: '/author' }
-      - { _controller: 'Author::show', routePath: '/author/{author}' }
+      - { _controller: 'Author::list', routePath: '/' }
+      - { _controller: 'Author::show', routePath: '/{author}' }
     aspects:
       author:
         type: PersistedAliasMapper
@@ -76,8 +76,8 @@ routeEnhancers:
     plugin: Topic
     defaultController: 'Topic::list'
     routes:
-      - { _controller: 'Topic::list', routePath: '/topic' }
-      - { _controller: 'Topic::show', routePath: '/topic/{topic}' }
+      - { _controller: 'Topic::list', routePath: '/' }
+      - { _controller: 'Topic::show', routePath: '/{topic}' }
     aspects:
       topic:
         type: PersistedAliasMapper
