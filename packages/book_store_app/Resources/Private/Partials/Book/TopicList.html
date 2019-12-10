@@ -3,7 +3,7 @@
     <p>
         Topics:
         <f:for each="{topics}" as="topic" iteration="iterator">
-            <f:link.action action="show" controller="Topic" arguments="{topic: topic}">
+            <f:link.action action="show" controller="Topic" pluginName="Topic" pageUid="{settings.pages.topic}" arguments="{topic: topic}">
                 {topic.name}
             </f:link.action>
             <f:if condition="{iterator.isLast}"><f:else>,</f:else></f:if>
