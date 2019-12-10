@@ -17,6 +17,20 @@ languages:
     direction: ltr
     flag: en-us-gb
     languageId: '0'
+  -
+    title: Deutsch
+    enabled: true
+    base: /de/
+    typo3Language: de
+    locale: de_DE.UTF-8
+    iso-639-1: de
+    navigationTitle: Deutsch
+    hreflang: en-DE
+    direction: ltr
+    fallbackType: fallback
+    fallbacks: '0'
+    flag: de
+    languageId: '1'
 rootPageId: 1
 routes:
   -
