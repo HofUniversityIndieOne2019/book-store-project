@@ -1,0 +1,94 @@
+base: 'http://book-store-project.ddev.site/'
+baseVariants:
+  -
+    base: 'http://book-store-project.ddev.site/'
+    condition: 'getenv("DDEV_PROJECT") == "book-store-project"'
+errorHandling: {  }
+languages:
+  -
+    title: English
+    enabled: true
+    base: /en/
+    typo3Language: default
+    locale: en_US.UTF-8
+    iso-639-1: en
+    navigationTitle: English
+    hreflang: en-US
+    direction: ltr
+    flag: en-us-gb
+    languageId: '0'
+rootPageId: 1
+routes:
+  -
+    route: robots.txt
+    type: staticText
+    content: "User-agent: *\r\nDisallow: /typo3/\r\n"
+
+routeEnhancers:
+  Book:
+    type: Extbase
+    extension: BookStoreApp
+    plugin: Book
+    defaultController: 'Book::list'
+    routes:
+      - { _controller: 'Book::list', routePath: '/' }
+      - { _controller: 'Book::show', routePath: '/{book}' }
+      - { _controller: 'Book::show', routePath: '/{book}/{back}' }
+    aspects:
+      book:
+        type: PersistedAliasMapper
+        tableName: 'tx_bookstoreapp_domain_model_book'
+        routeFieldName: 'slug'
+      back:
+        type: StaticValueMapper
+        map:
+          o: 'overview'
+  Author:
+    type: Extbase
+    extension: BookStoreApp
+    plugin: Author
+    defaultController: 'Author::list'
+    routes:
+      - { _controller: 'Author::list', routePath: '/author' }
+      - { _controller: 'Author::show', routePath: '/author/{author}' }
+    aspects:
+      author:
+        type: PersistedAliasMapper
+        tableName: 'tx_bookstoreapp_domain_model_author'
+        routeFieldName: 'slug'
+  Topic:
+    type: Extbase
+    extension: BookStoreApp
+    plugin: Topic
+    defaultController: 'Topic::list'
+    routes:
+      - { _controller: 'Topic::list', routePath: '/topic' }
+      - { _controller: 'Topic::show', routePath: '/topic/{topic}' }
+    aspects:
+      topic:
+        type: PersistedAliasMapper
+        tableName: 'tx_bookstoreapp_domain_model_topic'
+        routeFieldName: 'slug'
+  Overview:
+    type: Extbase
+    extension: BookStoreApp
+    plugin: Overview
+    defaultController: 'Dashboard::overview'
+    routes:
+      - { _controller: 'Dashboard::overview', routePath: '/' }
+  Wishlist:
+    type: Extbase
+    extension: BookStoreApp
+    plugin: Wishlist
+    defaultController: 'Wishlist::show'
+    routes:
+      - { _controller: 'Wishlist::show', routePath: '/' }
+      - { _controller: 'Wishlist::add', routePath: '/add/{book}' }
+      - { _controller: 'Wishlist::remove', routePath: '/remove/{book}' }
+      - { _controller: 'Wishlist::purge', routePath: '/purge' }
+    aspects:
+      book:
+        type: PersistedAliasMapper
+        tableName: 'tx_bookstoreapp_domain_model_book'
+        routeFieldName: 'slug'
+

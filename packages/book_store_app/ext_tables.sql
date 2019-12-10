@@ -5,6 +5,7 @@ CREATE TABLE tx_bookstoreapp_domain_model_book (
 
 	isbn varchar(255) DEFAULT '' NOT NULL,
 	title varchar(255) DEFAULT '' NOT NULL,
+	slug varchar(2048),
 	blurb text,
 	description text,
 	price double(11,2) DEFAULT '0.00' NOT NULL,
@@ -23,6 +24,7 @@ CREATE TABLE tx_bookstoreapp_domain_model_book (
 CREATE TABLE tx_bookstoreapp_domain_model_topic (
 
 	name varchar(255) DEFAULT '' NOT NULL,
+	slug varchar(2048),
 	description text
 
 );
@@ -33,6 +35,7 @@ CREATE TABLE tx_bookstoreapp_domain_model_topic (
 CREATE TABLE tx_bookstoreapp_domain_model_author (
 
 	name varchar(255) DEFAULT '' NOT NULL,
+	slug varchar(2048),
 	date_of_birth date DEFAULT NULL,
 	biography text
 
