@@ -1,4 +1,4 @@
-base: 'http://book-store-project.ddev.site/'
+base: 'https://book-store.project.anyhost.it'
 baseVariants:
   -
     base: 'http://book-store-project.ddev.site/'

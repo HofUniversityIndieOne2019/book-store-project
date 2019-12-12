@@ -47,6 +47,7 @@
         "patches-file": "composer.patches.json"
     },
     "require-dev": {
-        "friendsoftypo3/extension-builder": "dev-master"
+        "friendsoftypo3/extension-builder": "dev-master",
+        "oliver-hader/typo3-deployer": "^0.5.1"
     }
 }
