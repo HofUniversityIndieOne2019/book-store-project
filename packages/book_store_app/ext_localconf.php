@@ -17,6 +17,19 @@ call_user_func(
         );
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'OliverHader.BookStoreApp',
+            'Customer',
+            [
+                'Customer' => 'index, listAddresses, newAddress, createAddress, editAddress, updateAddress, deleteAddress, '
+                    . 'listBankAccounts, newBankAccount, createBankAccount, editBankAccount, updateBankAccount, deleteBankAccount',
+            ],
+            // non-cacheable actions
+            [
+                'Customer' => 'index, listAddresses, newAddress, createAddress, editAddress, updateAddress, deleteAddress, '
+                    . 'listBankAccounts, newBankAccount, createBankAccount, editBankAccount, updateBankAccount, deleteBankAccount',
+            ]
+        );
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'OliverHader.BookStoreApp',
             'Overview',
             [
                 'Dashboard' => 'overview',

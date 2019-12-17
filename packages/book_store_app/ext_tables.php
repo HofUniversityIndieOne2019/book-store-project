@@ -12,6 +12,11 @@ call_user_func(
         );
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
             'OliverHader.BookStoreApp',
+            'Customer',
+            'Customer settings (addresses, bank accounts)'
+        );
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
+            'OliverHader.BookStoreApp',
             'Overview',
             'Books overview'
         );
