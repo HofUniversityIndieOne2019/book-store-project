@@ -1,0 +1,72 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+    <h4>Addresses</h4>
+
+    <f:if condition="{addresses}">
+        <f:else>
+            <div class="alert alert-dark">
+                No addresses defined, yet.
+            </div>
+        </f:else>
+    </f:if>
+
+    <f:for each="{addresses}" as="address">
+        <div class="row">
+            <div class="col-9">
+                <div>{address.street}</div>
+                <div>{address.zip} {address.city}</div>
+            </div>
+            <div class="col-3">
+                <f:link.action action="editAddress" arguments="{address:address}" class="btn btn-warning">
+                    <core:icon identifier="actions-document-open" size="small" />
+                </f:link.action>
+                <f:link.action action="deleteAddress" arguments="{address:address}" class="btn btn-danger">
+                    <core:icon identifier="actions-version-document-remove" size="small" />
+                </f:link.action>
+            </div>
+        </div>
+    </f:for>
+
+    <f:link.action action="newAddress" class="btn btn-light">
+        <core:icon identifier="actions-document-new" size="small" />
+        <span class="pl-1">create address</span>
+    </f:link.action>
+
+    <hr>
+    <h4>Bank Accounts</h4>
+
+    <f:if condition="{bankAccounts}">
+        <f:else>
+            <div class="alert alert-dark">
+                No bank accounts defined, yet.
+            </div>
+        </f:else>
+    </f:if>
+
+    <f:for each="{bankAccounts}" as="bankAccount">
+        <div class="row">
+            <div class="col-9">
+                {bankAccount.iban}@{bankAccount.bankName}
+            </div>
+            <div class="col-3">
+                <f:link.action action="editBankAccount" arguments="{bankAccount:bankAccount}" class="btn btn-warning">
+                    <core:icon identifier="actions-document-open" size="small" />
+                </f:link.action>
+                <f:link.action action="deleteBankAccount" arguments="{bankAccount:bankAccount}" class="btn btn-danger">
+                    <core:icon identifier="actions-version-document-remove" size="small" />
+                </f:link.action>
+            </div>
+        </div>
+    </f:for>
+
+    <f:link.action action="newBankAccount" class="btn btn-light">
+        <core:icon identifier="actions-document-new" size="small" />
+        <span class="pl-1">create bank account</span>
+    </f:link.action>
+
+</f:section>
+</html>

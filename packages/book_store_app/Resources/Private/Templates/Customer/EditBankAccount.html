@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+    <h4>Edit Bank Account</h4>
+
+    <f:render partial="FormErrors" />
+
+    <f:form action="updateBankAccount" name="bankAccount" object="{bankAccount}">
+        <f:render partial="Customer/BankAccountFormFields" arguments="{bankAccount:bankAccount}" />
+
+        <div class="form-row">
+            <div class="col-6">
+                <f:render partial="Customer/BackToIndexLink" />
+            </div>
+            <div class="col-6 text-right">
+                <f:render partial="Customer/SaveFormButton" />
+            </div>
+        </div>
+    </f:form>
+</f:section>
+</html>
