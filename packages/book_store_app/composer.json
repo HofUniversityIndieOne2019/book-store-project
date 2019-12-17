@@ -9,6 +9,7 @@
         }
     ],
     "require": {
+        "ext-bcmath": "*",
         "typo3/cms-core": "^9.5"
     },
     "autoload": {
