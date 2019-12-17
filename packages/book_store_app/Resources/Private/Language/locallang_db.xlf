@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:book_store_app/Resources/Private/Language/locallang_db" date="2019-12-09T20:22:46Z" product-name="book_store_app">
+	<file source-language="en" datatype="plaintext" original="EXT:book_store_app/Resources/Private/Language/locallang_db" date="2019-12-17T20:03:54Z" product-name="book_store_app">
 		<header/>
 		<body>
 			<trans-unit id="tx_bookstoreapp_domain_model_book" resname="tx_bookstoreapp_domain_model_book">
@@ -90,11 +90,29 @@
 			<trans-unit id="tx_bookstoreapp_domain_model_customer.user" resname="tx_bookstoreapp_domain_model_customer.user">
 				<source>User</source>
 			</trans-unit>
+			<trans-unit id="tx_bookstoreapp_domain_model_customer.addresses" resname="tx_bookstoreapp_domain_model_customer.addresses">
+				<source>Addresses</source>
+			</trans-unit>
 			<trans-unit id="tx_bookstoreapp_domain_model_wishlist" resname="tx_bookstoreapp_domain_model_wishlist">
 				<source>Wishlist</source>
 			</trans-unit>
 			<trans-unit id="tx_bookstoreapp_domain_model_wishlist.books" resname="tx_bookstoreapp_domain_model_wishlist.books">
 				<source>Books</source>
+			</trans-unit>
+			<trans-unit id="tx_bookstoreapp_domain_model_address" resname="tx_bookstoreapp_domain_model_address">
+				<source>Address</source>
+			</trans-unit>
+			<trans-unit id="tx_bookstoreapp_domain_model_address.name" resname="tx_bookstoreapp_domain_model_address.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_bookstoreapp_domain_model_address.street" resname="tx_bookstoreapp_domain_model_address.street">
+				<source>Street</source>
+			</trans-unit>
+			<trans-unit id="tx_bookstoreapp_domain_model_address.city" resname="tx_bookstoreapp_domain_model_address.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_bookstoreapp_domain_model_address.zip" resname="tx_bookstoreapp_domain_model_address.zip">
+				<source>Zip</source>
 			</trans-unit>
 			<trans-unit id="tx_book_store_app_book.name" resname="tx_book_store_app_book.name">
 				<source>Book</source>

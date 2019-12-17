@@ -40,6 +40,14 @@ class Customer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $user = null;
 
     /**
+     * addresses
+     * 
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\OliverHader\BookStoreApp\Domain\Model\Address>
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     */
+    protected $addresses = null;
+
+    /**
      * Returns the customerId
      * 
      * @return string $customerId
@@ -100,5 +108,71 @@ class Customer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setUser(\TYPO3\CMS\Extbase\Domain\Model\FrontendUser $user)
     {
         $this->user = $user;
+    }
+
+    /**
+     * __construct
+     */
+    public function __construct()
+    {
+
+        //Do not remove the next line: It would break the functionality
+        $this->initStorageObjects();
+    }
+
+    /**
+     * Initializes all ObjectStorage properties
+     * Do not modify this method!
+     * It will be rewritten on each save in the extension builder
+     * You may modify the constructor of this class instead
+     * 
+     * @return void
+     */
+    protected function initStorageObjects()
+    {
+        $this->addresses = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+    }
+
+    /**
+     * Adds a Address
+     * 
+     * @param \OliverHader\BookStoreApp\Domain\Model\Address $address
+     * @return void
+     */
+    public function addAddress(\OliverHader\BookStoreApp\Domain\Model\Address $address)
+    {
+        $this->addresses->attach($address);
+    }
+
+    /**
+     * Removes a Address
+     * 
+     * @param \OliverHader\BookStoreApp\Domain\Model\Address $addressToRemove The Address to be removed
+     * @return void
+     */
+    public function removeAddress(\OliverHader\BookStoreApp\Domain\Model\Address $addressToRemove)
+    {
+        $this->addresses->detach($addressToRemove);
+    }
+
+    /**
+     * Returns the addresses
+     * 
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\OliverHader\BookStoreApp\Domain\Model\Address> $addresses
+     */
+    public function getAddresses()
+    {
+        return $this->addresses;
+    }
+
+    /**
+     * Sets the addresses
+     * 
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\OliverHader\BookStoreApp\Domain\Model\Address> $addresses
+     * @return void
+     */
+    public function setAddresses(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $addresses)
+    {
+        $this->addresses = $addresses;
     }
 }

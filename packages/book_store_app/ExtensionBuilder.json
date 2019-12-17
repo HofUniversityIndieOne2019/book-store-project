@@ -300,8 +300,8 @@
         {
             "config": {
                 "position": [
-                    117,
-                    375
+                    50,
+                    371
                 ]
             },
             "name": "New Model Object",
@@ -374,8 +374,8 @@
         {
             "config": {
                 "position": [
-                    387,
-                    331
+                    325,
+                    329
                 ]
             },
             "name": "New Model Object",
@@ -491,6 +491,17 @@
                             "relationWire": "",
                             "renderType": "selectMultipleSideBySide",
                             "uid": "1308198596896"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "addresses",
+                            "relationType": "zeroToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "inline",
+                            "uid": "1514501874144"
                         }
                     ]
                 }
@@ -544,6 +555,90 @@
                             "uid": "963026052918"
                         }
                     ]
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    910,
+                    304
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "Address",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "823474568278"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": true,
+                            "propertyName": "name",
+                            "propertyType": "String",
+                            "uid": "547419792523"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": true,
+                            "propertyName": "street",
+                            "propertyType": "String",
+                            "uid": "273570363530"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": true,
+                            "propertyName": "city",
+                            "propertyType": "String",
+                            "uid": "86168258924"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": true,
+                            "propertyName": "zip",
+                            "propertyType": "String",
+                            "uid": "185853767119"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
                 }
             }
         }
@@ -649,11 +744,23 @@
                 "terminal": "SOURCES",
                 "uid": "10865959983"
             }
+        },
+        {
+            "src": {
+                "moduleId": 5,
+                "terminal": "relationWire_1",
+                "uid": "1514501874144"
+            },
+            "tgt": {
+                "moduleId": 7,
+                "terminal": "SOURCES",
+                "uid": "823474568278"
+            }
         }
     ],
     "storagePath": "\/var\/www\/html\/packages\/",
     "log": {
-        "last_modified": "2019-12-09 08:22",
+        "last_modified": "2019-12-17 08:03",
         "extension_builder_version": "9.10.2",
         "be_user": " (1)"
     }

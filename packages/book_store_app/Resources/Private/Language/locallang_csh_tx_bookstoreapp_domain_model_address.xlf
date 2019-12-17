@@ -3,17 +3,17 @@
 	<file source-language="en" datatype="plaintext" original="EXT:book_store_app/Resources/Private/Language/locallang_csh" date="2019-12-17T20:03:54Z" product-name="book_store_app">
 		<header/>
 		<body>
-			<trans-unit id="customer_id.description" resname="customer_id.description">
-				<source>customerId</source>
-			</trans-unit>
 			<trans-unit id="name.description" resname="name.description">
 				<source>name</source>
 			</trans-unit>
-			<trans-unit id="user.description" resname="user.description">
-				<source>user</source>
+			<trans-unit id="street.description" resname="street.description">
+				<source>street</source>
 			</trans-unit>
-			<trans-unit id="addresses.description" resname="addresses.description">
-				<source>addresses</source>
+			<trans-unit id="city.description" resname="city.description">
+				<source>city</source>
+			</trans-unit>
+			<trans-unit id="zip.description" resname="zip.description">
+				<source>zip</source>
 			</trans-unit>
 		</body>
 	</file>

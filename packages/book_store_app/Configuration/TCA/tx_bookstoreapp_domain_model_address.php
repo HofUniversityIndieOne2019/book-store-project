@@ -1,8 +1,8 @@
 <?php
 return [
     'ctrl' => [
-        'title' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_customer',
-        'label' => 'customer_id',
+        'title' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_address',
+        'label' => 'name',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
@@ -16,14 +16,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'customer_id,name',
-        'iconfile' => 'EXT:book_store_app/Resources/Public/Icons/tx_bookstoreapp_domain_model_customer.gif'
+        'searchFields' => 'name,street,city,zip',
+        'iconfile' => 'EXT:book_store_app/Resources/Public/Icons/tx_bookstoreapp_domain_model_address.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, customer_id, name, user, addresses',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, street, city, zip',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, customer_id, name, user, addresses, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, street, city, zip, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -54,8 +54,8 @@ return [
                 'items' => [
                     ['', 0],
                 ],
-                'foreign_table' => 'tx_bookstoreapp_domain_model_customer',
-                'foreign_table_where' => 'AND {#tx_bookstoreapp_domain_model_customer}.{#pid}=###CURRENT_PID### AND {#tx_bookstoreapp_domain_model_customer}.{#sys_language_uid} IN (-1,0)',
+                'foreign_table' => 'tx_bookstoreapp_domain_model_address',
+                'foreign_table_where' => 'AND {#tx_bookstoreapp_domain_model_address}.{#pid}=###CURRENT_PID### AND {#tx_bookstoreapp_domain_model_address}.{#sys_language_uid} IN (-1,0)',
             ],
         ],
         'l10n_diffsource' => [
@@ -116,68 +116,47 @@ return [
             ],
         ],
 
-        'customer_id' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_customer.customer_id',
-            'config' => [
-                'type' => 'input',
-                'size' => 30,
-                'eval' => 'trim'
-            ],
-        ],
         'name' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_customer.name',
+            'label' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_address.name',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim,required'
             ],
         ],
-        'user' => [
+        'street' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_customer.user',
+            'label' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_address.street',
             'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'fe_users',
-                'default' => 0,
-                'size' => 10,
-                'autoSizeMax' => 30,
-                'maxitems' => 1,
-                'multiple' => 0,
-                'fieldControl' => [
-                    'editPopup' => [
-                        'disabled' => false,
-                    ],
-                    'addRecord' => [
-                        'disabled' => false,
-                    ],
-                    'listModule' => [
-                        'disabled' => true,
-                    ],
-                ],
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim,required'
             ],
-
         ],
-        'addresses' => [
+        'city' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_customer.addresses',
+            'label' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_address.city',
             'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_bookstoreapp_domain_model_address',
-                'foreign_field' => 'customer',
-                'maxitems' => 9999,
-                'appearance' => [
-                    'collapseAll' => 0,
-                    'levelLinksPosition' => 'top',
-                    'showSynchronizationLink' => 1,
-                    'showPossibleLocalizationRecords' => 1,
-                    'showAllLocalizationLink' => 1
-                ],
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim,required'
             ],
-
+        ],
+        'zip' => [
+            'exclude' => true,
+            'label' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_address.zip',
+            'config' => [
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim,required'
+            ],
         ],
     
+        'customer' => [
+            'config' => [
+                'type' => 'passthrough',
+            ],
+        ],
     ],
 ];

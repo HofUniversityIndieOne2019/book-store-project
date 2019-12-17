@@ -68,7 +68,8 @@ CREATE TABLE tx_bookstoreapp_domain_model_customer (
 
 	customer_id varchar(255) DEFAULT '' NOT NULL,
 	name varchar(255) DEFAULT '' NOT NULL,
-	user int(11) unsigned DEFAULT '0'
+	user int(11) unsigned DEFAULT '0',
+	addresses int(11) unsigned DEFAULT '0' NOT NULL
 
 );
 
@@ -78,5 +79,19 @@ CREATE TABLE tx_bookstoreapp_domain_model_customer (
 CREATE TABLE tx_bookstoreapp_domain_model_wishlist (
 
 	books text NOT NULL
+
+);
+
+#
+# Table structure for table 'tx_bookstoreapp_domain_model_address'
+#
+CREATE TABLE tx_bookstoreapp_domain_model_address (
+
+	customer int(11) unsigned DEFAULT '0' NOT NULL,
+
+	name varchar(255) DEFAULT '' NOT NULL,
+	street varchar(255) DEFAULT '' NOT NULL,
+	city varchar(255) DEFAULT '' NOT NULL,
+	zip varchar(255) DEFAULT '' NOT NULL
 
 );
