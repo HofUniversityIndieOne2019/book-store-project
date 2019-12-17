@@ -48,6 +48,14 @@ class Customer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $addresses = null;
 
     /**
+     * bankAccounts
+     * 
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\OliverHader\BookStoreApp\Domain\Model\BankAccount>
+     * @TYPO3\CMS\Extbase\Annotation\ORM\Cascade("remove")
+     */
+    protected $bankAccounts = null;
+
+    /**
      * Returns the customerId
      * 
      * @return string $customerId
@@ -131,6 +139,7 @@ class Customer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected function initStorageObjects()
     {
         $this->addresses = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $this->bankAccounts = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
     }
 
     /**
@@ -174,5 +183,48 @@ class Customer extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setAddresses(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $addresses)
     {
         $this->addresses = $addresses;
+    }
+
+    /**
+     * Adds a BankAccount
+     * 
+     * @param \OliverHader\BookStoreApp\Domain\Model\BankAccount $bankAccount
+     * @return void
+     */
+    public function addBankAccount(\OliverHader\BookStoreApp\Domain\Model\BankAccount $bankAccount)
+    {
+        $this->bankAccounts->attach($bankAccount);
+    }
+
+    /**
+     * Removes a BankAccount
+     * 
+     * @param \OliverHader\BookStoreApp\Domain\Model\BankAccount $bankAccountToRemove The BankAccount to be removed
+     * @return void
+     */
+    public function removeBankAccount(\OliverHader\BookStoreApp\Domain\Model\BankAccount $bankAccountToRemove)
+    {
+        $this->bankAccounts->detach($bankAccountToRemove);
+    }
+
+    /**
+     * Returns the bankAccounts
+     * 
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\OliverHader\BookStoreApp\Domain\Model\BankAccount> $bankAccounts
+     */
+    public function getBankAccounts()
+    {
+        return $this->bankAccounts;
+    }
+
+    /**
+     * Sets the bankAccounts
+     * 
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\OliverHader\BookStoreApp\Domain\Model\BankAccount> $bankAccounts
+     * @return void
+     */
+    public function setBankAccounts(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $bankAccounts)
+    {
+        $this->bankAccounts = $bankAccounts;
     }
 }

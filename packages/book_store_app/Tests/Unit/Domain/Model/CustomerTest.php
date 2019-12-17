@@ -150,4 +150,67 @@ class CustomerTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
 
         $this->subject->removeAddress($address);
     }
+
+    /**
+     * @test
+     */
+    public function getBankAccountsReturnsInitialValueForBankAccount()
+    {
+        $newObjectStorage = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        self::assertEquals(
+            $newObjectStorage,
+            $this->subject->getBankAccounts()
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function setBankAccountsForObjectStorageContainingBankAccountSetsBankAccounts()
+    {
+        $bankAccount = new \OliverHader\BookStoreApp\Domain\Model\BankAccount();
+        $objectStorageHoldingExactlyOneBankAccounts = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+        $objectStorageHoldingExactlyOneBankAccounts->attach($bankAccount);
+        $this->subject->setBankAccounts($objectStorageHoldingExactlyOneBankAccounts);
+
+        self::assertAttributeEquals(
+            $objectStorageHoldingExactlyOneBankAccounts,
+            'bankAccounts',
+            $this->subject
+        );
+    }
+
+    /**
+     * @test
+     */
+    public function addBankAccountToObjectStorageHoldingBankAccounts()
+    {
+        $bankAccount = new \OliverHader\BookStoreApp\Domain\Model\BankAccount();
+        $bankAccountsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->setMethods(['attach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $bankAccountsObjectStorageMock->expects(self::once())->method('attach')->with(self::equalTo($bankAccount));
+        $this->inject($this->subject, 'bankAccounts', $bankAccountsObjectStorageMock);
+
+        $this->subject->addBankAccount($bankAccount);
+    }
+
+    /**
+     * @test
+     */
+    public function removeBankAccountFromObjectStorageHoldingBankAccounts()
+    {
+        $bankAccount = new \OliverHader\BookStoreApp\Domain\Model\BankAccount();
+        $bankAccountsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
+            ->setMethods(['detach'])
+            ->disableOriginalConstructor()
+            ->getMock();
+
+        $bankAccountsObjectStorageMock->expects(self::once())->method('detach')->with(self::equalTo($bankAccount));
+        $this->inject($this->subject, 'bankAccounts', $bankAccountsObjectStorageMock);
+
+        $this->subject->removeBankAccount($bankAccount);
+    }
 }

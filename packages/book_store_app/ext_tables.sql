@@ -69,7 +69,8 @@ CREATE TABLE tx_bookstoreapp_domain_model_customer (
 	customer_id varchar(255) DEFAULT '' NOT NULL,
 	name varchar(255) DEFAULT '' NOT NULL,
 	user int(11) unsigned DEFAULT '0',
-	addresses int(11) unsigned DEFAULT '0' NOT NULL
+	addresses int(11) unsigned DEFAULT '0' NOT NULL,
+	bank_accounts int(11) unsigned DEFAULT '0' NOT NULL
 
 );
 
@@ -93,5 +94,17 @@ CREATE TABLE tx_bookstoreapp_domain_model_address (
 	street varchar(255) DEFAULT '' NOT NULL,
 	city varchar(255) DEFAULT '' NOT NULL,
 	zip varchar(255) DEFAULT '' NOT NULL
+
+);
+
+#
+# Table structure for table 'tx_bookstoreapp_domain_model_bankaccount'
+#
+CREATE TABLE tx_bookstoreapp_domain_model_bankaccount (
+
+	customer int(11) unsigned DEFAULT '0' NOT NULL,
+
+	iban varchar(255) DEFAULT '' NOT NULL,
+	bank_name varchar(255) DEFAULT '' NOT NULL
 
 );

@@ -1,8 +1,8 @@
 <?php
 return [
     'ctrl' => [
-        'title' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_customer',
-        'label' => 'customer_id',
+        'title' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_bankaccount',
+        'label' => 'iban',
         'tstamp' => 'tstamp',
         'crdate' => 'crdate',
         'cruser_id' => 'cruser_id',
@@ -16,14 +16,14 @@ return [
             'starttime' => 'starttime',
             'endtime' => 'endtime',
         ],
-        'searchFields' => 'customer_id,name',
-        'iconfile' => 'EXT:book_store_app/Resources/Public/Icons/tx_bookstoreapp_domain_model_customer.gif'
+        'searchFields' => 'iban,bank_name',
+        'iconfile' => 'EXT:book_store_app/Resources/Public/Icons/tx_bookstoreapp_domain_model_bankaccount.gif'
     ],
     'interface' => [
-        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, customer_id, name, user, addresses, bank_accounts',
+        'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, iban, bank_name',
     ],
     'types' => [
-        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, customer_id, name, user, addresses, bank_accounts, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+        '1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, iban, bank_name, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
     ],
     'columns' => [
         'sys_language_uid' => [
@@ -54,8 +54,8 @@ return [
                 'items' => [
                     ['', 0],
                 ],
-                'foreign_table' => 'tx_bookstoreapp_domain_model_customer',
-                'foreign_table_where' => 'AND {#tx_bookstoreapp_domain_model_customer}.{#pid}=###CURRENT_PID### AND {#tx_bookstoreapp_domain_model_customer}.{#sys_language_uid} IN (-1,0)',
+                'foreign_table' => 'tx_bookstoreapp_domain_model_bankaccount',
+                'foreign_table_where' => 'AND {#tx_bookstoreapp_domain_model_bankaccount}.{#pid}=###CURRENT_PID### AND {#tx_bookstoreapp_domain_model_bankaccount}.{#sys_language_uid} IN (-1,0)',
             ],
         ],
         'l10n_diffsource' => [
@@ -116,86 +116,29 @@ return [
             ],
         ],
 
-        'customer_id' => [
+        'iban' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_customer.customer_id',
+            'label' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_bankaccount.iban',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim,required'
             ],
         ],
-        'name' => [
+        'bank_name' => [
             'exclude' => true,
-            'label' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_customer.name',
+            'label' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_bankaccount.bank_name',
             'config' => [
                 'type' => 'input',
                 'size' => 30,
-                'eval' => 'trim'
+                'eval' => 'trim,required'
             ],
-        ],
-        'user' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_customer.user',
-            'config' => [
-                'type' => 'select',
-                'renderType' => 'selectMultipleSideBySide',
-                'foreign_table' => 'fe_users',
-                'default' => 0,
-                'size' => 10,
-                'autoSizeMax' => 30,
-                'maxitems' => 1,
-                'multiple' => 0,
-                'fieldControl' => [
-                    'editPopup' => [
-                        'disabled' => false,
-                    ],
-                    'addRecord' => [
-                        'disabled' => false,
-                    ],
-                    'listModule' => [
-                        'disabled' => true,
-                    ],
-                ],
-            ],
-
-        ],
-        'addresses' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_customer.addresses',
-            'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_bookstoreapp_domain_model_address',
-                'foreign_field' => 'customer',
-                'maxitems' => 9999,
-                'appearance' => [
-                    'collapseAll' => 0,
-                    'levelLinksPosition' => 'top',
-                    'showSynchronizationLink' => 1,
-                    'showPossibleLocalizationRecords' => 1,
-                    'showAllLocalizationLink' => 1
-                ],
-            ],
-
-        ],
-        'bank_accounts' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:book_store_app/Resources/Private/Language/locallang_db.xlf:tx_bookstoreapp_domain_model_customer.bank_accounts',
-            'config' => [
-                'type' => 'inline',
-                'foreign_table' => 'tx_bookstoreapp_domain_model_bankaccount',
-                'foreign_field' => 'customer',
-                'maxitems' => 9999,
-                'appearance' => [
-                    'collapseAll' => 0,
-                    'levelLinksPosition' => 'top',
-                    'showSynchronizationLink' => 1,
-                    'showPossibleLocalizationRecords' => 1,
-                    'showAllLocalizationLink' => 1
-                ],
-            ],
-
         ],
     
+        'customer' => [
+            'config' => [
+                'type' => 'passthrough',
+            ],
+        ],
     ],
 ];

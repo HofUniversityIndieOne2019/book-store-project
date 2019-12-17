@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:book_store_app/Resources/Private/Language/locallang_db" date="2019-12-17T20:03:54Z" product-name="book_store_app">
+	<file source-language="en" datatype="plaintext" original="EXT:book_store_app/Resources/Private/Language/locallang_db" date="2019-12-17T20:25:04Z" product-name="book_store_app">
 		<header/>
 		<body>
 			<trans-unit id="tx_bookstoreapp_domain_model_book" resname="tx_bookstoreapp_domain_model_book">
@@ -93,6 +93,9 @@
 			<trans-unit id="tx_bookstoreapp_domain_model_customer.addresses" resname="tx_bookstoreapp_domain_model_customer.addresses">
 				<source>Addresses</source>
 			</trans-unit>
+			<trans-unit id="tx_bookstoreapp_domain_model_customer.bank_accounts" resname="tx_bookstoreapp_domain_model_customer.bank_accounts">
+				<source>Bank Accounts</source>
+			</trans-unit>
 			<trans-unit id="tx_bookstoreapp_domain_model_wishlist" resname="tx_bookstoreapp_domain_model_wishlist">
 				<source>Wishlist</source>
 			</trans-unit>
@@ -113,6 +116,15 @@
 			</trans-unit>
 			<trans-unit id="tx_bookstoreapp_domain_model_address.zip" resname="tx_bookstoreapp_domain_model_address.zip">
 				<source>Zip</source>
+			</trans-unit>
+			<trans-unit id="tx_bookstoreapp_domain_model_bankaccount" resname="tx_bookstoreapp_domain_model_bankaccount">
+				<source>Bank Account</source>
+			</trans-unit>
+			<trans-unit id="tx_bookstoreapp_domain_model_bankaccount.iban" resname="tx_bookstoreapp_domain_model_bankaccount.iban">
+				<source>Iban</source>
+			</trans-unit>
+			<trans-unit id="tx_bookstoreapp_domain_model_bankaccount.bank_name" resname="tx_bookstoreapp_domain_model_bankaccount.bank_name">
+				<source>Bank Name</source>
 			</trans-unit>
 			<trans-unit id="tx_book_store_app_book.name" resname="tx_book_store_app_book.name">
 				<source>Book</source>

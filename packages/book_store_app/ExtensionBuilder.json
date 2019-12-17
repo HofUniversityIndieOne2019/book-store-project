@@ -502,6 +502,17 @@
                             "relationWire": "[wired]",
                             "renderType": "inline",
                             "uid": "1514501874144"
+                        },
+                        {
+                            "foreignRelationClass": "",
+                            "lazyLoading": false,
+                            "propertyIsExcludeField": true,
+                            "relationDescription": "",
+                            "relationName": "bankAccounts",
+                            "relationType": "zeroToMany",
+                            "relationWire": "[wired]",
+                            "renderType": "inline",
+                            "uid": "626173493491"
                         }
                     ]
                 }
@@ -561,8 +572,8 @@
         {
             "config": {
                 "position": [
-                    910,
-                    304
+                    932,
+                    284
                 ]
             },
             "name": "New Model Object",
@@ -634,6 +645,68 @@
                             "propertyName": "zip",
                             "propertyType": "String",
                             "uid": "185853767119"
+                        }
+                    ]
+                },
+                "relationGroup": {
+                    "relations": []
+                }
+            }
+        },
+        {
+            "config": {
+                "position": [
+                    583,
+                    476
+                ]
+            },
+            "name": "New Model Object",
+            "value": {
+                "actionGroup": {
+                    "_default0_list": false,
+                    "_default1_show": false,
+                    "_default2_new_create": false,
+                    "_default3_edit_update": false,
+                    "_default4_delete": false,
+                    "customActions": []
+                },
+                "name": "BankAccount",
+                "objectsettings": {
+                    "addDeletedField": true,
+                    "addHiddenField": true,
+                    "addStarttimeEndtimeFields": true,
+                    "aggregateRoot": true,
+                    "categorizable": false,
+                    "description": "",
+                    "mapToTable": "",
+                    "parentClass": "",
+                    "sorting": false,
+                    "type": "Entity",
+                    "uid": "1042317897642"
+                },
+                "propertyGroup": {
+                    "properties": [
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": true,
+                            "propertyName": "iban",
+                            "propertyType": "String",
+                            "uid": "1120871919074"
+                        },
+                        {
+                            "allowedFileTypes": "",
+                            "maxItems": "1",
+                            "propertyDescription": "",
+                            "propertyIsExcludeField": true,
+                            "propertyIsL10nModeExclude": false,
+                            "propertyIsRequired": true,
+                            "propertyName": "bankName",
+                            "propertyType": "String",
+                            "uid": "1488994514670"
                         }
                     ]
                 },
@@ -756,11 +829,23 @@
                 "terminal": "SOURCES",
                 "uid": "823474568278"
             }
+        },
+        {
+            "src": {
+                "moduleId": 5,
+                "terminal": "relationWire_2",
+                "uid": "626173493491"
+            },
+            "tgt": {
+                "moduleId": 8,
+                "terminal": "SOURCES",
+                "uid": "1042317897642"
+            }
         }
     ],
     "storagePath": "\/var\/www\/html\/packages\/",
     "log": {
-        "last_modified": "2019-12-17 08:03",
+        "last_modified": "2019-12-17 08:25",
         "extension_builder_version": "9.10.2",
         "be_user": " (1)"
     }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="EXT:book_store_app/Resources/Private/Language/locallang_csh" date="2019-12-17T20:03:54Z" product-name="book_store_app">
+	<file source-language="en" datatype="plaintext" original="EXT:book_store_app/Resources/Private/Language/locallang_csh" date="2019-12-17T20:25:04Z" product-name="book_store_app">
 		<header/>
 		<body>
 			<trans-unit id="customer_id.description" resname="customer_id.description">
@@ -14,6 +14,9 @@
 			</trans-unit>
 			<trans-unit id="addresses.description" resname="addresses.description">
 				<source>addresses</source>
+			</trans-unit>
+			<trans-unit id="bank_accounts.description" resname="bank_accounts.description">
+				<source>bankAccounts</source>
 			</trans-unit>
 		</body>
 	</file>
