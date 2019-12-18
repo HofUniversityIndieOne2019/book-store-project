@@ -125,6 +125,10 @@ class CustomerController extends ActionController
         $this->view->assign('bankAccount', $bankAccount);
     }
 
+    /**
+     * @param BankAccount $bankAccount
+     * @TYPO3\CMS\Extbase\Annotation\Validate("OliverHader\BookStoreApp\Validator\BankAccountValidator", param="bankAccount", options={"prefix":"DE"})
+     */
     public function createBankAccountAction(BankAccount $bankAccount)
     {
         $this->customer->addBankAccount($bankAccount);

@@ -8,7 +8,7 @@ use TYPO3\CMS\Extbase\Validation\Validator\AbstractValidator;
 /**
  * Usage example for controller action:
  * ```
- * @Validate("OliverHader\BookStoreApp\Validator\BankAccountValidator", param="bankAccount", options="{"prefix":"DE"}")
+ * @TYPO3\CMS\Extbase\Annotation\Validate("OliverHader\BookStoreApp\Validator\BankAccountValidator", param="bankAccount", options={"prefix":"DE"})
  * ```
  * Test IBAN: DE18684522900077015428
  */
