@@ -10,10 +10,7 @@
 
     <f:form action="createAddress" name="address" object="{address}">
         <f:render partial="Customer/AddressFormFields" arguments="{address:address}" />
-
-        <f:comment>
-            <f:form.hidden property="name" value="Default" />
-        </f:comment>
+        <f:form.hidden property="name" value="Default" />
 
         <div class="form-row">
             <div class="col-6">
