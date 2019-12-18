@@ -1,6 +1,7 @@
 <?php
 namespace OliverHader\BookStoreApp\Domain\Model;
 
+use TYPO3\CMS\Extbase\Annotation\Validate;
 
 /***
  *
@@ -22,7 +23,7 @@ class Book extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * isbn
      * 
      * @var string
-     * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
+     * @Validate("NotEmpty")
      */
     protected $isbn = '';
 
