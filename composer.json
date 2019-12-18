@@ -48,6 +48,7 @@
     },
     "require-dev": {
         "friendsoftypo3/extension-builder": "dev-master",
-        "oliver-hader/typo3-deployer": "^0.5.1"
+        "oliver-hader/typo3-deployer": "^0.5.1",
+        "codeception/codeception": "^3.1"
     }
 }
