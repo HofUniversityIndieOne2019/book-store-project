@@ -8,12 +8,23 @@ class FrontendPagesCest
     }
 
     // tests
-    public function tryToTest(AcceptanceTester $I)
+    public function areImportantLinksAvailableInNavigation(AcceptanceTester $I, AdminTest $Admin)
     {
         $I->amOnPage('/');
-        $I->see('Company', 'nav#mainnavigation');
-        $I->see('Books', 'nav#mainnavigation');
-        $I->dontSee('Logout', 'nav#mainnavigation');
-        $I->makeScreenshot('navigation');
+        $I->canSee('Company', 'nav#mainnavigation');
+        $I->cantSee('Logout', 'nav#mainnavigation');
+    }
+
+    public function ICanLoginAndLogoutAgain(AcceptanceTester $I)
+    {
+        $I->amOnPage('/');
+        $I->canSee('My Book Store', 'nav#mainnavigation');
+        $I->click('My Book Store', 'nav#mainnavigation');
+        $I->canSee('User login');
+        $I->fillField('user', 'user-001');
+        $I->fillField('pass', 'password');
+        $I->click('input[type=submit]');
+        $I->canSee('You are now logged in as \'user-001\'');
+        $I->makeScreenshot('logged-in');
     }
 }
