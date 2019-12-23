@@ -7,6 +7,7 @@
         Street
     </label>
     <f:form.textfield property="street" class="form-control" placeholder="My Street 123" />
+    <f:render partial="PropertyFormErrors" arguments="{forPropertyPath: 'address.street'}" />
 </div>
 
 <div class="form-row">
@@ -15,12 +16,14 @@
             ZIP
         </label>
         <f:form.textfield property="zip" class="form-control" placeholder="12345" />
+        <f:render partial="PropertyFormErrors" arguments="{forPropertyPath: 'address.zip'}" />
     </div>
     <div class="form-group col-8">
         <label>
             City
         </label>
         <f:form.textfield property="city" class="form-control" placeholder="My City" />
+        <f:render partial="PropertyFormErrors" arguments="{forPropertyPath: 'address.city'}" />
     </div>
 </div>
 

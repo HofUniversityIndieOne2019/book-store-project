@@ -6,8 +6,6 @@
 <f:section name="content">
     <h4>Create new Address</h4>
 
-    <f:render partial="FormErrors" />
-
     <f:form action="createAddress" name="address" object="{address}">
         <f:render partial="Customer/AddressFormFields" arguments="{address:address}" />
         <f:form.hidden property="name" value="Default" />

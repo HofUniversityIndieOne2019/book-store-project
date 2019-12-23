@@ -3,6 +3,19 @@
 	<file source-language="en" datatype="plaintext" original="EXT:book_store_app/Resources/Private/Language/locallang" date="2019-12-17T20:25:04Z" product-name="book_store_app">
 		<header/>
 		<body>
+			<trans-unit id="errors.code.1238108068" resname="errors.code.1238108068">
+				<source>The value should be much longer...</source>
+			</trans-unit>
+			<trans-unit id="errors.combined.address.street" resname="errors.combined.address.street">
+				<source>Please provide a valid street value.</source>
+			</trans-unit>
+			<trans-unit id="errors.combined.address.city" resname="errors.combined.address.city">
+				<source>Please provide a valid city value.</source>
+			</trans-unit>
+			<trans-unit id="errors.combined.address.zip" resname="errors.combined.address.zip">
+				<source>Please provide a valid German ZIP value (5 digits).</source>
+			</trans-unit>
+
 			<trans-unit id="tx_bookstoreapp_domain_model_book" resname="tx_bookstoreapp_domain_model_book">
 				<source>Book</source>
 			</trans-unit>
