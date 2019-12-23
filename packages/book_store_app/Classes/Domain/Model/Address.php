@@ -22,7 +22,6 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * name
      * 
      * @var string
-     * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
      */
     protected $name = '';
 
@@ -31,6 +30,8 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * 
      * @var string
      * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
+     * @TYPO3\CMS\Extbase\Annotation\Validate("StringLength", options={"minimum":2})
+     * @TYPO3\CMS\Extbase\Annotation\Validate("RegularExpression", options={"regularExpression":"/^[\w ,.-]+$/iu"})
      */
     protected $street = '';
 
@@ -39,6 +40,8 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * 
      * @var string
      * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
+     * @TYPO3\CMS\Extbase\Annotation\Validate("StringLength", options={"minimum":2})
+     * @TYPO3\CMS\Extbase\Annotation\Validate("RegularExpression", options={"regularExpression":"/^[\w ,.-]+$/iu"})
      */
     protected $city = '';
 
@@ -47,7 +50,7 @@ class Address extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
      * 
      * @var string
      * @TYPO3\CMS\Extbase\Annotation\Validate("NotEmpty")
-     * @TYPO3\CMS\Extbase\Annotation\Validate("RegularExpression", options={"regularExpression": "/^\d{5}$/"})
+     * @TYPO3\CMS\Extbase\Annotation\Validate("RegularExpression", options={"regularExpression":"/^\d{5}$/"})
      */
     protected $zip = '';
 
