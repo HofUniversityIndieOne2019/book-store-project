@@ -4,7 +4,7 @@ namespace OliverHader\BookStoreApp\Controller;
 use OliverHader\BookStoreApp\Domain\Model\Address;
 use OliverHader\BookStoreApp\Domain\Model\BankAccount;
 use OliverHader\BookStoreApp\Domain\Model\Customer;
-use OliverHader\BookStoreApp\Domain\Model\PermissionException;
+use OliverHader\BookStoreApp\PermissionException;
 use OliverHader\SessionService\SubjectResolver;
 use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 use TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager;

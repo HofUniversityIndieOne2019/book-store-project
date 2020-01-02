@@ -1,5 +1,5 @@
 <?php
-namespace OliverHader\BookStoreApp\Domain\Model;
+namespace OliverHader\BookStoreApp;
 
 use TYPO3\CMS\Extbase\Exception;
 
