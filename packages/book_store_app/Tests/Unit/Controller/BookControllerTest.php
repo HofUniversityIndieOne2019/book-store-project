@@ -45,7 +45,9 @@ class BookControllerTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
         $this->inject($this->subject, 'bookRepository', $bookRepository);
 
         $view = $this->getMockBuilder(\TYPO3\CMS\Extbase\Mvc\View\ViewInterface::class)->getMock();
-        $view->expects(self::once())->method('assign')->with('books', $allBooks);
+        // define sequences when `$view->assign` is called, starting at zero-index `0`
+        $view->expects(self::at(0))->method('assign')->with('search', null);
+        $view->expects(self::at(1))->method('assign')->with('books', $allBooks);
         $this->inject($this->subject, 'view', $view);
 
         $this->subject->listAction();
@@ -60,7 +62,9 @@ class BookControllerTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
 
         $view = $this->getMockBuilder(\TYPO3\CMS\Extbase\Mvc\View\ViewInterface::class)->getMock();
         $this->inject($this->subject, 'view', $view);
-        $view->expects(self::once())->method('assign')->with('book', $book);
+        // define sequences when `$view->assign` is called, starting at zero-index `0`
+        $view->expects(self::at(0))->method('assign')->with('book', $book);
+        $view->expects(self::at(1))->method('assign')->with('back', null);
 
         $this->subject->showAction($book);
     }

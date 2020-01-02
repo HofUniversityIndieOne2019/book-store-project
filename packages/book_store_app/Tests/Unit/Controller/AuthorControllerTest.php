@@ -60,7 +60,9 @@ class AuthorControllerTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCas
 
         $view = $this->getMockBuilder(\TYPO3\CMS\Extbase\Mvc\View\ViewInterface::class)->getMock();
         $this->inject($this->subject, 'view', $view);
-        $view->expects(self::once())->method('assign')->with('author', $author);
+        // define sequences when `$view->assign` is called, starting at zero-index `0`
+        $view->expects(self::at(0))->method('assign')->with('author', $author);
+        $view->expects(self::at(1))->method('assign')->with('back', null);
 
         $this->subject->showAction($author);
     }
