@@ -19,7 +19,7 @@ extensions:
 
 paths:
   tests: Acceptance
-  output: ../var/log/_output
+  output: ../var/log/acceptance
   data: .
   support: Acceptance/Support
 
