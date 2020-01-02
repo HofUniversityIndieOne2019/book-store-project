@@ -84,6 +84,7 @@ class BookControllerTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
         $bookRepository->expects(self::once())->method('add')->with($book);
         $this->inject($this->subject, 'bookRepository', $bookRepository);
 
+        $this->subject->expects(self::once())->method('redirect')->with('list');
         $this->subject->createAction($book);
     }
 
@@ -116,6 +117,7 @@ class BookControllerTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
         $bookRepository->expects(self::once())->method('update')->with($book);
         $this->inject($this->subject, 'bookRepository', $bookRepository);
 
+        $this->subject->expects(self::once())->method('redirect')->with('list');
         $this->subject->updateAction($book);
     }
 
@@ -134,6 +136,7 @@ class BookControllerTest extends \TYPO3\TestingFramework\Core\Unit\UnitTestCase
         $bookRepository->expects(self::once())->method('remove')->with($book);
         $this->inject($this->subject, 'bookRepository', $bookRepository);
 
+        $this->subject->expects(self::once())->method('redirect')->with('list');
         $this->subject->deleteAction($book);
     }
 }
