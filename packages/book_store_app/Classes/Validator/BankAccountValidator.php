@@ -16,12 +16,24 @@ use TYPO3\CMS\Extbase\Validation\Validator\AbstractValidator;
 class BankAccountValidator extends AbstractValidator
 {
     /**
+     * Must be disabled, otherwise `null` will not lead to validation errors.
+     *
+     * @var bool
+     */
+    protected $acceptsEmptyValues = false;
+
+    /**
      * Options are defined when using `@Validate` annotation.
      *
      * @var array
      */
     protected $supportedOptions = [
-        'prefix' => null,
+        'prefix' => [
+            null, // default value
+            'IBAN prefix (e.g. DE)', // description
+            'string', // value type
+            true, // mandatory option
+        ]
     ];
 
     /**
