@@ -52,6 +52,7 @@
         "typo3/testing-framework": "^4.14",
         "codeception/codeception": "^4.0",
         "codeception/module-asserts": "^1.1",
-        "codeception/module-webdriver": "^1.0"
+        "codeception/module-webdriver": "^1.0",
+        "infection/infection": "^0.15.0"
     }
 }

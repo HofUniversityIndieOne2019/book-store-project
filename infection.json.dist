@@ -1,0 +1,24 @@
+{
+  "source": {
+    "directories": [
+      "packages/book_store_app/Classes"
+    ]
+  },
+  "tmpDir": "var/tmp/",
+  "logs": {
+    "text": "var/log/infection/infection.log",
+    "summary": "var/log/infection/summary.log",
+    "debug": "var/log/infection/debug.log",
+    "perMutator": "var/log/infection/per-mutator.md",
+    "badge": {
+      "branch": "master"
+    }
+  },
+  "phpUnit": {
+    "configDir": "tests/Unit"
+  },
+  "testFramework": "phpunit",
+  "bootstrap": "",
+  "initialTestsPhpOptions": "-d zend_extension=xdebug.so",
+  "testFrameworkOptions": "-vvv"
+}
