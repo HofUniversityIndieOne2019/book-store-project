@@ -3,8 +3,8 @@ language: php
 matrix:
   include:
     - php: '7.2'
-#    - php: '7.3'
-#    - php: '7.4'
+    - php: '7.3'
+    - php: '7.4'
   fast_finish: true
   allow_failures:
     - php: nightly
@@ -33,6 +33,10 @@ script:
     echo;
     echo "Running unit tests";
     vendor/bin/phpunit --colors -c tests/Unit/;
+  - >
+    echo;
+    echo "Running functional tests";
+    vendor/bin/phpunit --colors -c tests/Functional/;
   - >
     echo;
     echo "Running PHP lint";
