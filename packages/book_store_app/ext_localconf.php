@@ -42,37 +42,37 @@ call_user_func(
             'OliverHader.BookStoreApp',
             'Book',
             [
-                'Book' => 'list, show, new, create, edit, update, delete',
+                'Book' => 'list, show',
             ],
             // non-cacheable actions
             [
-                'Book' => 'list, show, new, create, edit, update, delete',
+                'Book' => 'list, show',
             ]
         );
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'OliverHader.BookStoreApp',
             'Author',
             [
-                'Author' => 'list, show, new, create, edit, update, delete',
-                'Publisher' => 'list, show, new, create, edit, update, delete',
-                'Country' => 'list, show, new, create, edit, update, delete'
+                'Author' => 'list, show',
+                'Publisher' => 'list, show',
+                'Country' => 'list, show'
             ],
             // non-cacheable actions
             [
-                'Author' => 'list, show, new, create, edit, update, delete',
-                'Publisher' => 'list, show, new, create, edit, update, delete',
-                'Country' => 'list, show, new, create, edit, update, delete'
+                'Author' => 'list, show',
+                'Publisher' => 'list, show',
+                'Country' => 'list, show'
             ]
         );
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'OliverHader.BookStoreApp',
             'Topic',
             [
-                'Topic' => 'list, show, new, create, edit, update, delete',
+                'Topic' => 'list, show',
             ],
             // non-cacheable actions
             [
-                'Topic' => 'list, show, new, create, edit, update, delete',
+                'Topic' => 'list, show',
             ]
         );
 
@@ -123,7 +123,7 @@ call_user_func(
            }'
         );
 		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-		
+
 			$iconRegistry->registerIcon(
 				'book_store_app-plugin-book',
 				\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,

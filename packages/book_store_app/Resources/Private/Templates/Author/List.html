@@ -31,12 +31,16 @@ Otherwise your changes will be overwritten the next time you save the extension 
                 <td><f:link.action action="show" arguments="{author : author}">{author.name}</f:link.action></td>
                 <td><f:link.action action="show" arguments="{author : author}">{author.dateOfBirth -> f:format.date()}</f:link.action></td>
                 <td><f:link.action action="show" arguments="{author : author}">{author.biography}</f:link.action></td>
-                <td><f:link.action action="edit" arguments="{author : author}">Edit</f:link.action></td>
-                <td><f:link.action action="delete" arguments="{author : author}">Delete</f:link.action></td>
+                <f:comment>
+                    <td><f:link.action action="edit" arguments="{author : author}">Edit</f:link.action></td>
+                    <td><f:link.action action="delete" arguments="{author : author}">Delete</f:link.action></td>
+                </f:comment>
             </tr>
         </f:for>
     </table>
 
-    <f:link.action action="new">New Author</f:link.action>
+    <f:comment>
+        <f:link.action action="new">New Author</f:link.action>
+    </f:comment>
 </f:section>
 </html>

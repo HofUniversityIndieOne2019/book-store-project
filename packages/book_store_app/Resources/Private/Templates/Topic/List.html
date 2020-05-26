@@ -29,12 +29,16 @@ Otherwise your changes will be overwritten the next time you save the extension 
             <tr>
                 <td><f:link.action action="show" arguments="{topic : topic}">{topic.name}</f:link.action></td>
                 <td><f:link.action action="show" arguments="{topic : topic}">{topic.description}</f:link.action></td>
-                <td><f:link.action action="edit" arguments="{topic : topic}">Edit</f:link.action></td>
-                <td><f:link.action action="delete" arguments="{topic : topic}">Delete</f:link.action></td>
+                <f:comment>
+                    <td><f:link.action action="edit" arguments="{topic : topic}">Edit</f:link.action></td>
+                    <td><f:link.action action="delete" arguments="{topic : topic}">Delete</f:link.action></td>
+                </f:comment>
             </tr>
         </f:for>
     </table>
 
-    <f:link.action action="new">New Topic</f:link.action>
+    <f:comment>
+        <f:link.action action="new">New Topic</f:link.action>
+    </f:comment>
 </f:section>
 </html>
