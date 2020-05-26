@@ -65,11 +65,16 @@ routeEnhancers:
     routes:
       - { _controller: 'Author::list', routePath: '/' }
       - { _controller: 'Author::show', routePath: '/{author}' }
+      - { _controller: 'Author::show', routePath: '/{author}/{back}' }
     aspects:
       author:
         type: PersistedAliasMapper
         tableName: 'tx_bookstoreapp_domain_model_author'
         routeFieldName: 'slug'
+      back:
+        type: StaticValueMapper
+        map:
+          o: 'overview'
   Topic:
     type: Extbase
     extension: BookStoreApp
@@ -78,11 +83,16 @@ routeEnhancers:
     routes:
       - { _controller: 'Topic::list', routePath: '/' }
       - { _controller: 'Topic::show', routePath: '/{topic}' }
+      - { _controller: 'Topic::show', routePath: '/{topic}/{back}' }
     aspects:
       topic:
         type: PersistedAliasMapper
         tableName: 'tx_bookstoreapp_domain_model_topic'
         routeFieldName: 'slug'
+      back:
+        type: StaticValueMapper
+        map:
+          o: 'overview'
   Overview:
     type: Extbase
     extension: BookStoreApp
